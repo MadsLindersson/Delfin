@@ -23,8 +23,8 @@ public class CompetetiveMember extends Member {
 
     private double competitionBreastTime;
 
-    public CompetetiveMember(String name, int age, boolean status, boolean ageGroup, boolean debt, double debtAmount, boolean crawl, boolean butterfly, boolean backcrawl, boolean breast, double bestTrainingCrawlTime, double bestButterflyTime, double bestBackcrawlTime, double bestBreastTime, double competitionCrawlTime, double competitionButterflyTime, double competitionBackcrawlTime, double competitionBreastTime) {
-        super(name, age, status, ageGroup, debt, debtAmount);
+    public CompetetiveMember(String name, int age, int id, boolean status, boolean ageGroup, boolean debt, double debtAmount, boolean crawl, boolean butterfly, boolean backcrawl, boolean breast, double bestTrainingCrawlTime, double bestButterflyTime, double bestBackcrawlTime, double bestBreastTime, double competitionCrawlTime, double competitionButterflyTime, double competitionBackcrawlTime, double competitionBreastTime) {
+        super(name, age, id, status, ageGroup, debt, debtAmount);
         this.crawl = crawl;
         this.butterfly = butterfly;
         this.backcrawl = backcrawl;
@@ -39,8 +39,8 @@ public class CompetetiveMember extends Member {
         this.competitionBreastTime = competitionBreastTime;
     }
 
-    public CompetetiveMember(String name, int age, boolean status, boolean ageGroup, boolean debt, double debtAmount, boolean crawl, boolean butterfly, boolean backcrawl, boolean breast) {
-        super(name, age, status, ageGroup, debt, debtAmount);
+    public CompetetiveMember(String name, int age, int id, boolean status, boolean ageGroup, boolean debt, double debtAmount, boolean crawl, boolean butterfly, boolean backcrawl, boolean breast) {
+        super(name, age, id, status, ageGroup, debt, debtAmount);
         this.crawl = crawl;
         this.butterfly = butterfly;
         this.backcrawl = backcrawl;

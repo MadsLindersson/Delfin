@@ -3,6 +3,8 @@ public class Member {
 
     private int age;
 
+    private int id;
+
     private boolean status;
 
     private boolean ageGroup;
@@ -11,9 +13,10 @@ public class Member {
 
     private double debtAmount;
 
-    public Member(String name, int age, boolean status, boolean ageGroup, boolean debt, double debtAmount) {
+    public Member(String name, int age, int id, boolean status, boolean ageGroup, boolean debt, double debtAmount) {
         this.name = name;
         this.age = age;
+        this.id = id;
         this.status = status;
         this.ageGroup = ageGroup;
         this.debt = debt;
@@ -30,6 +33,14 @@ public class Member {
 
     public int getAge() {
         return age;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
     }
 
     public void setAge(int age) {
