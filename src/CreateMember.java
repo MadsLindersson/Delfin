@@ -1,7 +1,7 @@
 import java.util.ArrayList;
 import java.util.Scanner;
 
-public class CreateMember {
+/*public class CreateMember {
 
     public static void createMember() {
         Scanner scanner = new Scanner(System.in);
@@ -55,4 +55,4 @@ public class CreateMember {
             System.out.println("Wrong input");
         }
 
-}
+}*/
