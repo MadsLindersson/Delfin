@@ -39,13 +39,6 @@ public class CompetetiveMember extends Member {
         this.competitionBreastTime = competitionBreastTime;
     }
 
-    public CompetetiveMember(String name, int age, int id, boolean status, boolean ageGroup, boolean debt, double debtAmount, boolean crawl, boolean butterfly, boolean backcrawl, boolean breast) {
-        super(name, age, id, status, ageGroup, debt, debtAmount);
-        this.crawl = crawl;
-        this.butterfly = butterfly;
-        this.backcrawl = backcrawl;
-        this.breast = breast;
-    }
 
     public boolean isCrawl() {
         return crawl;
