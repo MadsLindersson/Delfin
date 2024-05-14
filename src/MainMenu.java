@@ -1,12 +1,12 @@
 import java.util.Scanner;
 
 public final class MainMenu {
-
+    public static Scanner input = new Scanner(System.in);
 
     //Empty contructer
     private MainMenu () {}
 
-    public static void menu (Scanner input) {
+    public static void menu () {
         int answer = 1;
 
         while (answer != 0) {
@@ -38,7 +38,6 @@ public final class MainMenu {
                                 break;
                             default:
                                 break;
-
                         }
                     }
                     break;
@@ -65,7 +64,6 @@ public final class MainMenu {
                                 break;
                             default:
                                 break;
-
                         }
                     }
                     break;
@@ -89,7 +87,7 @@ public final class MainMenu {
                             case 3:
                                 double subscribtionFee = Subscription.calculateMembersSubscription();
                                 if(subscribtionFee != 0) {
-                                    System.out.println("The members annual subscription fee is:" + subscribtionFee);
+                                    System.out.printf("The members annual subscription fee is: %2.2f DKK. %n %n", subscribtionFee);
                                 }else {
                                     System.out.println("Member not found");
                                 }
