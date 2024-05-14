@@ -31,10 +31,12 @@ public final class MainMenu {
 
                         switch (answer1) {
                             case 1:
+                                CreateMember.createMember();
                                 break;
                             case 2:
                                 break;
                             case 3:
+                                ShowMembers.showMembers();
                                 break;
                             default:
                                 break;
@@ -93,6 +95,7 @@ public final class MainMenu {
                                 }
                                 break;
                             case 4:
+                                Debt.checkDebt();
                                 break;
                             default:
                                 break;
