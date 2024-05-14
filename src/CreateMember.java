@@ -61,10 +61,10 @@ public class CreateMember {
             double competitionBackcrawlTime = 0.0;
             double competitionBreastTime = 0.0;
 
-            CompetetiveMember competetiveMember = new CompetetiveMember(name, age, id,  status, ageGroup, debt, debtAmount, crawl, butterfly, backcrawl, breast,
+            CompetetiveMember member = new CompetetiveMember(name, age, id,  status, ageGroup, debt, debtAmount, crawl, butterfly, backcrawl, breast,
                     bestTrainingCrawlTime, bestButterflyTime, bestBackcrawlTime, bestBreastTime, competitionCrawlTime, competitionButterflyTime
                     , competitionBackcrawlTime, competitionBreastTime);
-            Main.members.add(competetiveMember);
+            Main.members.add(member);
         }
         if (answer != 1 && answer != 2) {
             System.out.println("Wrong input");

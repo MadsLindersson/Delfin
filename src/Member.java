@@ -78,4 +78,6 @@ public class Member {
     public void setDebtAmount(double debtAmount) {
         this.debtAmount = debtAmount;
     }
+
 }
+

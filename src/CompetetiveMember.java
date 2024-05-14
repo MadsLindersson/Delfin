@@ -135,4 +135,5 @@ public class CompetetiveMember extends Member {
     public void setCompetitionBreastTime(double competitionBreastTime) {
         this.competitionBreastTime = competitionBreastTime;
     }
+
 }
