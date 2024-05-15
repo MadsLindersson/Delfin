@@ -1,12 +1,13 @@
+import java.io.IOException;
 import java.util.Scanner;
 
 public final class MainMenu {
     public static Scanner input = new Scanner(System.in);
 
-    //Empty contructer
+    //Empty contructer - Private to ensure no instances of the class can be made.
     private MainMenu () {}
 
-    public static void menu () {
+    public static void menu () throws IOException {
         int answer = 1;
 
         while (answer != 0) {
@@ -25,16 +26,21 @@ public final class MainMenu {
                                 1. Create new member.
                                 2. Edit member.
                                 3. Show all members.
+                                4. Delete member.
                                 0. Go back.""");
 
                         answer1 = input.nextInt();
 
                         switch (answer1) {
                             case 1:
+                                SaveData.saveDataInFile();
                                 break;
                             case 2:
+                                SaveData.saveDataInFile();
                                 break;
                             case 3:
+                                break;
+                            case 4:
                                 break;
                             default:
                                 break;
@@ -48,8 +54,8 @@ public final class MainMenu {
                                 1. Show top 5 swimmers in each disciplin.
                                 2. Show training results for all swimmers.
                                 3. Show competition results.
-                                4. Show all swimmers.
-                                0. Go back.""");                   //Sorteres i grupper
+                                4. Show all competetitive swimmers.
+                                0. Go back.""");
 
                         answer2 = input.nextInt();
 
@@ -75,6 +81,7 @@ public final class MainMenu {
                                 2. Show current yearly income.
                                 3. Show a members subscription
                                 4. Show members in debt.
+                                5. Change subscription rates.
                                 0. Go back.""");
 
                         answer3 = input.nextInt();
@@ -93,6 +100,8 @@ public final class MainMenu {
                                 }
                                 break;
                             case 4:
+                                break;
+                            case 5:
                                 break;
                             default:
                                 break;

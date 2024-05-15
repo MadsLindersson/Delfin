@@ -21,6 +21,8 @@ public final class SaveData {
     }
 
     private SaveData () {}
+
+    //Writes the arraylist to 2 seperate files, 1 for members and one for competetive members.
     public static void saveDataInFile () throws IOException {
         for(Member member : Main.members)   {
             if (member instanceof CompetetiveMember) {
