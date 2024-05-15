@@ -33,6 +33,7 @@ public final class MainMenu {
 
                         switch (answer1) {
                             case 1:
+                                CreateMember.createMember();
                                 SaveData.saveDataInFile();
                                 break;
                             case 2:
@@ -100,6 +101,7 @@ public final class MainMenu {
                                 }
                                 break;
                             case 4:
+                                Debt.checkDebt();
                                 break;
                             case 5:
                                 break;
