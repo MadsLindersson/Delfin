@@ -7,6 +7,7 @@ public class Main {
 
     public static void main(String[] args) throws IOException {
         LoadData.loadDataFromFiles();
+        LoadData.readSubscriptionRatesFromFile();
         MainMenu.menu();
 
 

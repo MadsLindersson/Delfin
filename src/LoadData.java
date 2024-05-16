@@ -71,53 +71,20 @@ public final class LoadData {
                     backcrawl,breast,bestTrainingCrawlTime, bestButterflyTime,bestBackcrawlTime,bestBreastTime,competitioncrawlTime,competitionButterflyTime,
                     competitionBackcrawlTime, competitionBreastTime));
         }
+            readFile.reset();
+            readFile2.reset();
     }
 
-    public static int returnPassiveMemberRate () {
-        while (readFile.hasNextLine()) {
-            String line = readFile.nextLine();
-            Scanner readLine = new Scanner(line).useDelimiter(",");
-            int passiveSubscription = readLine.nextInt();
-            int youthSwimmer = readLine.nextInt();
-            int seniorSwimmer = readLine.nextInt();
-            double over60Swimmer = parseDouble(readLine.next());
-            return passiveSubscription;
-        }
-    }
-    public static int returnYouthMemberRate () {
-        while (readFile.hasNextLine()) {
-            String line = readFile.nextLine();
-            Scanner readLine = new Scanner(line).useDelimiter(",");
-            int passiveSubscription = readLine.nextInt();
-            int youthSwimmer = readLine.nextInt();
-            int seniorSwimmer = readLine.nextInt();
-            double over60Swimmer = parseDouble(readLine.next());
+    public static void readSubscriptionRatesFromFile () throws FileNotFoundException {
+            Scanner readFile3 = new Scanner (new File ("SubscriptionRates.txt"));
 
-            return youthSwimmer;
-        }
-    }
-    public static int returnSeniorRate () {
-        while (readFile.hasNextLine()) {
-            String line = readFile.nextLine();
+            String line = readFile3.nextLine();
             Scanner readLine = new Scanner(line).useDelimiter(",");
-            int passiveSubscription = readLine.nextInt();
-            int youthSwimmer = readLine.nextInt();
-            int seniorSwimmer = readLine.nextInt();
-            double over60Swimmer = parseDouble(readLine.next());
-
-            return seniorSwimmer;
-        }
+            Subscription.passiveMember = readLine.nextInt();
+            Subscription.youthSwimmer = readLine.nextInt();
+            Subscription.seniorSwimmer = readLine.nextInt();
+            Subscription.over60Swimmer = parseDouble(readLine.next());
+            readFile3.reset();
     }
-    public static double returnOver60Rate () {
-        while (readFile.hasNextLine()) {
-            String line = readFile.nextLine();
-            Scanner readLine = new Scanner(line).useDelimiter(",");
-            int passiveSubscription = readLine.nextInt();
-            int youthSwimmer = readLine.nextInt();
-            int seniorSwimmer = readLine.nextInt();
-            double over60Swimmer = parseDouble(readLine.next());
 
-            return over60Swimmer;
-        }
-    }
 }

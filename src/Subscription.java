@@ -1,22 +1,23 @@
+import java.io.FileNotFoundException;
 import java.util.Scanner;
 
 public final class Subscription {
     //Empty constructer
     private Subscription () {}
 
+    public static int passiveMember;
+    public static int youthSwimmer;
+    public static int seniorSwimmer;
+    public static double over60Swimmer;
     public static Scanner input = new Scanner (System.in);
-    public static final int passiveMember = 500;
-    public static final int youthSwimmer = 1000;
-    public static final int seniorSwimmer = 1600;
-    public static final double over60Swimmer = 1200;
 
     public static void editSubscriptionRates () {
-        LoadData.readSubscriptionRates();
+        //Skal ændre i fields og kalde på SaveData.saveSubscriptionRatesInFile som gemmer dem i fil.
     }
 
     //Returns the subscription rate for a specific member.
-    public static double calculateMembersSubscription ()     {
-        //Skal finde ID på medlemmet - getAge & getStatus - og så regne kontingentet
+    public static double calculateMembersSubscription () throws FileNotFoundException {
+        LoadData.readSubscriptionRatesFromFile();
         System.out.println("Enter member ID number");
         int inputID = input.nextInt();
 
