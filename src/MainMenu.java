@@ -37,11 +37,16 @@ public final class MainMenu {
                                 SaveData.saveDataInFile();
                                 break;
                             case 2:
+                                EditMember.editMember();
                                 SaveData.saveDataInFile();
                                 break;
                             case 3:
+                                ShowMembers.showMembers();
+                                SaveData.saveDataInFile();
                                 break;
                             case 4:
+                                DeleteMember.deleteMember();
+                                SaveData.saveDataInFile();
                                 break;
                             default:
                                 break;
