@@ -21,7 +21,7 @@ public class ShowMembers {
 
                 // Print specific information only if the member participates in specefic team.
                 if (competitiveMember.isCrawl()) {
-                    System.out.println("Best Training Crawl Time: " + competitiveMember.getBestTrainingCrawlTime());
+                    System.out.println("Best Training Crawl Time: " + competitiveMember.getBestCrawlTime());
                     System.out.println("Competition Crawl Time: " + competitiveMember.getCompetitionCrawlTime());
                 }
 

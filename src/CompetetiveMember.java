@@ -7,7 +7,7 @@ public class CompetetiveMember extends Member {
 
     private boolean breast;
 
-    private double bestTrainingCrawlTime;
+    private double bestCrawlTime;
 
     private double bestButterflyTime;
 
@@ -23,13 +23,13 @@ public class CompetetiveMember extends Member {
 
     private double competitionBreastTime;
 
-    public CompetetiveMember(String name, int age, int id, boolean status, boolean ageGroup, boolean debt, double debtAmount, boolean crawl, boolean butterfly, boolean backcrawl, boolean breast, double bestTrainingCrawlTime, double bestButterflyTime, double bestBackcrawlTime, double bestBreastTime, double competitionCrawlTime, double competitionButterflyTime, double competitionBackcrawlTime, double competitionBreastTime) {
+    public CompetetiveMember(String name, int age, int id, boolean status, boolean ageGroup, boolean debt, double debtAmount, boolean crawl, boolean butterfly, boolean backcrawl, boolean breast, double bestCrawlTime, double bestButterflyTime, double bestBackcrawlTime, double bestBreastTime, double competitionCrawlTime, double competitionButterflyTime, double competitionBackcrawlTime, double competitionBreastTime) {
         super(name, age, id, status, ageGroup, debt, debtAmount);
         this.crawl = crawl;
         this.butterfly = butterfly;
         this.backcrawl = backcrawl;
         this.breast = breast;
-        this.bestTrainingCrawlTime = bestTrainingCrawlTime;
+        this.bestCrawlTime = bestCrawlTime;
         this.bestButterflyTime = bestButterflyTime;
         this.bestBackcrawlTime = bestBackcrawlTime;
         this.bestBreastTime = bestBreastTime;
@@ -38,7 +38,6 @@ public class CompetetiveMember extends Member {
         this.competitionBackcrawlTime = competitionBackcrawlTime;
         this.competitionBreastTime = competitionBreastTime;
     }
-
 
     public boolean isCrawl() {
         return crawl;
@@ -72,12 +71,12 @@ public class CompetetiveMember extends Member {
         this.breast = breast;
     }
 
-    public double getBestTrainingCrawlTime() {
-        return bestTrainingCrawlTime;
+    public double getBestCrawlTime() {
+        return bestCrawlTime;
     }
 
-    public void setBestTrainingCrawlTime(double bestTrainingCrawlTime) {
-        this.bestTrainingCrawlTime = bestTrainingCrawlTime;
+    public void setBestCrawlTime(double bestCrawlTime) {
+        this.bestCrawlTime = bestCrawlTime;
     }
 
     public double getBestButterflyTime() {
@@ -135,5 +134,4 @@ public class CompetetiveMember extends Member {
     public void setCompetitionBreastTime(double competitionBreastTime) {
         this.competitionBreastTime = competitionBreastTime;
     }
-
 }
