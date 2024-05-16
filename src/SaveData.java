@@ -41,7 +41,7 @@ public final class SaveData {
                 output2.write(((CompetetiveMember) member).isButterfly() + ",");
                 output2.write(((CompetetiveMember) member).isBackcrawl() + ",");
                 output2.write(((CompetetiveMember) member).isBreast() + ",");
-                output2.write(((CompetetiveMember) member).getBestTrainingCrawlTime() + ",");
+                output2.write(((CompetetiveMember) member).getBestCrawlTime() + ",");
                 output2.write(((CompetetiveMember) member).getBestButterflyTime() + ",");
                 output2.write(((CompetetiveMember) member).getBestBackcrawlTime() + ",");
                 output2.write(((CompetetiveMember) member).getBestBreastTime() + ",");
