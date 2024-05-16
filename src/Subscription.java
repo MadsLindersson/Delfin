@@ -18,17 +18,15 @@ public final class Subscription {
 
         for (Member member : Main.members)  {
             if(inputID == member.getId()) {
-                if(member.isStatus()) {
-                    if(member.getAge() < 18) {
-                        return youthSwimmer;
-                    }else if(member.getAge() >= 18 && member.getAge() < 60) {
-                        return seniorSwimmer;
-                    } else if (member.getAge() >= 60) {
-                        return over60Swimmer;
-                    }
-                }else {
-                    return passiveMember;
+                if(member.isStatus() && member.getAge() < 18) {
+                    return youthSwimmer;
+                }else if(member.isStatus() && member.getAge() >= 18 && member.getAge() < 60) {
+                    return seniorSwimmer;
+                } else if (member.isStatus() && member.getAge() >= 60) {
+                    return over60Swimmer;
                 }
+            }else {
+                return passiveMember;
             }
         }
         return 0;
