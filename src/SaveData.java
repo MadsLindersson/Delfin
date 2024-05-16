@@ -44,7 +44,7 @@ public final class SaveData {
                 output2.write(((CompetetiveMember) member).getCompetitionCrawlTime() + ", ");
                 output2.write(((CompetetiveMember) member).getCompetitionButterflyTime() + ", ");
                 output2.write(((CompetetiveMember) member).getCompetitionBackcrawlTime() + ", ");
-                output2.write(((CompetetiveMember) member).getCompetitionBreastTime() + "");
+                output2.write(((CompetetiveMember) member).getCompetitionBreastTime() + ", ");
                 output2.newLine();
                 output2.flush();
             }else {
@@ -54,7 +54,7 @@ public final class SaveData {
                 output.write(member.isStatus() + ", ");
                 output.write(member.isAgeGroup() + ", ");
                 output.write(member.isDebt() + ", ");
-                output.write(member.getDebtAmount() + "");
+                output.write(member.getDebtAmount() + ", ");
                 output.newLine();
                 output.flush();
             }
