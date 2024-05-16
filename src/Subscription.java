@@ -8,7 +8,11 @@ public final class Subscription {
     public static final int passiveMember = 500;
     public static final int youthSwimmer = 1000;
     public static final int seniorSwimmer = 1600;
-    public static final double over60Swimmer = 1600 * 0.75;
+    public static final double over60Swimmer = 1200;
+
+    public static void editSubscriptionRates () {
+        LoadData.readSubscriptionRates();
+    }
 
     //Returns the subscription rate for a specific member.
     public static double calculateMembersSubscription ()     {

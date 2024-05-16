@@ -72,4 +72,52 @@ public final class LoadData {
                     competitionBackcrawlTime, competitionBreastTime));
         }
     }
+
+    public static int returnPassiveMemberRate () {
+        while (readFile.hasNextLine()) {
+            String line = readFile.nextLine();
+            Scanner readLine = new Scanner(line).useDelimiter(",");
+            int passiveSubscription = readLine.nextInt();
+            int youthSwimmer = readLine.nextInt();
+            int seniorSwimmer = readLine.nextInt();
+            double over60Swimmer = parseDouble(readLine.next());
+            return passiveSubscription;
+        }
+    }
+    public static int returnYouthMemberRate () {
+        while (readFile.hasNextLine()) {
+            String line = readFile.nextLine();
+            Scanner readLine = new Scanner(line).useDelimiter(",");
+            int passiveSubscription = readLine.nextInt();
+            int youthSwimmer = readLine.nextInt();
+            int seniorSwimmer = readLine.nextInt();
+            double over60Swimmer = parseDouble(readLine.next());
+
+            return youthSwimmer;
+        }
+    }
+    public static int returnSeniorRate () {
+        while (readFile.hasNextLine()) {
+            String line = readFile.nextLine();
+            Scanner readLine = new Scanner(line).useDelimiter(",");
+            int passiveSubscription = readLine.nextInt();
+            int youthSwimmer = readLine.nextInt();
+            int seniorSwimmer = readLine.nextInt();
+            double over60Swimmer = parseDouble(readLine.next());
+
+            return seniorSwimmer;
+        }
+    }
+    public static double returnOver60Rate () {
+        while (readFile.hasNextLine()) {
+            String line = readFile.nextLine();
+            Scanner readLine = new Scanner(line).useDelimiter(",");
+            int passiveSubscription = readLine.nextInt();
+            int youthSwimmer = readLine.nextInt();
+            int seniorSwimmer = readLine.nextInt();
+            double over60Swimmer = parseDouble(readLine.next());
+
+            return over60Swimmer;
+        }
+    }
 }
