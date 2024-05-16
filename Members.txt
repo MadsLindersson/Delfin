@@ -1,2 +1,2 @@
-Henning, 18, 1, true, false, false, 0.0
-Flemming, 20, 2, false, false, false, 0.0
+Henning,17,1,false,true,false,0.0,
+Alex,25,1,false,true,false,0.0,

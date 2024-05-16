@@ -1,5 +1,1 @@
-Flemming, 22, 3, true, true, false, 0.0, true, true, false, false, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0
-Glemming, 22, 4, true, true, false, 0.0, true, false, false, false, 120.0, 0.0, 0.0, 0.0, 90.0, 0.0, 0.0, 0.0
-Hemming, 22, 5, true, true, false, 0.0, true, true, false, true, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0
-Remming, 22, 6, true, true, false, 0.0, true, true, false, true, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0
-Yemming, 22, 7, true, true, false, 0.0, true, true, false, false, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0
+Flemming,22,2,true,true,false,0.0,true,true,false,false,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,

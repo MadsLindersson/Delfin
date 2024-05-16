@@ -100,6 +100,7 @@ public final class MainMenu {
                             case 1:
                                 break;
                             case 2:
+                                Subscription.showYearlySum();
                                 break;
                             case 3:
                                 double subscribtionFee = Subscription.calculateMembersSubscription();

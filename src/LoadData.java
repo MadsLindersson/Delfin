@@ -1,6 +1,10 @@
 import java.io.File;
 import java.io.FileNotFoundException;
+import java.util.Locale;
 import java.util.Scanner;
+
+import static java.lang.Boolean.parseBoolean;
+import static java.lang.Double.parseDouble;
 
 public final class LoadData {
 
@@ -30,15 +34,57 @@ public final class LoadData {
 
         while (readFile.hasNextLine()) {
             String line = readFile.nextLine();
-            Scanner readLine = new Scanner (line);
+            Scanner readLine = new Scanner(line).useDelimiter(",");
             String name = readLine.next();
             int age = readLine.nextInt();
             int ID = readLine.nextInt();
-            boolean status = readFile.nextBoolean();
-            boolean ageGroup = readLine.nextBoolean();
-            Boolean debt = readLine.nextBoolean();
-            double debtAmount = readLine.nextDouble();
-            Member member = new Member(name, age, ID, status, ageGroup, debt, debtAmount);
+            boolean status = parseBoolean(readLine.next());
+            boolean ageGroup = parseBoolean(readLine.next());
+            boolean debt = parseBoolean(readLine.next());
+            double debtAmount = parseDouble(readLine.next());
+            Main.members.add(new Member(name, age, ID, status, ageGroup, debt, debtAmount));
         }
+
+        while (readFile2.hasNextLine()) {
+            String line = readFile2.nextLine();
+            Scanner readLine = new Scanner (line).useDelimiter(",");
+            String name = readLine.next();
+            int age = readLine.nextInt();
+            int ID = readLine.nextInt();
+            boolean status = parseBoolean(readLine.next());
+            boolean ageGroup = parseBoolean(readLine.next());
+            boolean debt = parseBoolean(readLine.next());
+            double debtAmount = parseDouble(readLine.next());
+            boolean crawl = parseBoolean(readLine.next());
+            boolean butterfly = parseBoolean(readLine.next());
+            boolean backcrawl = parseBoolean(readLine.next());
+            boolean breast = parseBoolean(readLine.next());
+            double bestTrainingCrawlTime = parseDouble(readLine.next());
+            double bestButterflyTime = parseDouble(readLine.next());
+            double bestBackcrawlTime = parseDouble(readLine.next());
+            double bestBreastTime = parseDouble(readLine.next());
+            double competitioncrawlTime = parseDouble(readLine.next());
+            double competitionButterflyTime = parseDouble(readLine.next());
+            double competitionBackcrawlTime = parseDouble(readLine.next());
+            double competitionBreastTime = parseDouble(readLine.next());
+            Main.members.add(new CompetetiveMember(name, age, ID, status, ageGroup, debt, debtAmount, crawl, butterfly,
+                    backcrawl,breast,bestTrainingCrawlTime, bestButterflyTime,bestBackcrawlTime,bestBreastTime,competitioncrawlTime,competitionButterflyTime,
+                    competitionBackcrawlTime, competitionBreastTime));
+        }
+            readFile.reset();
+            readFile2.reset();
     }
+
+    public static void readSubscriptionRatesFromFile () throws FileNotFoundException {
+            Scanner readFile3 = new Scanner (new File ("SubscriptionRates.txt"));
+
+            String line = readFile3.nextLine();
+            Scanner readLine = new Scanner(line).useDelimiter(",");
+            Subscription.passiveMember = readLine.nextInt();
+            Subscription.youthSwimmer = readLine.nextInt();
+            Subscription.seniorSwimmer = readLine.nextInt();
+            Subscription.over60Swimmer = parseDouble(readLine.next());
+            readFile3.reset();
+    }
+
 }
