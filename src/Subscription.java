@@ -13,7 +13,15 @@ public final class Subscription {
     public static Scanner input = new Scanner (System.in);
 
     public static void showSubscriptionRates () {
-
+        System.out.println();
+        System.out.printf("""
+                Current subsciption rates:
+                Passive member:               %2d
+                Swimmer under 18:             %2d
+                Swimmer over 18 and under 60: %2d
+                Swimmer over 60:              %2.2f""",passiveMember, youthSwimmer, seniorSwimmer, over60Swimmer);
+        System.out.println();
+        System.out.println();
     }
 
     public static void editSubscriptionRates () throws IOException {
@@ -55,6 +63,7 @@ public final class Subscription {
                 System.out.println("Wrong input");
         }
         SaveData.saveSubscriptionRatesInFile();
+        LoadData.readSubscriptionRatesFromFile();
     }
 
     //Returns the subscription rate for a specific member.

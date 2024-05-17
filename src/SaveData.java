@@ -30,7 +30,6 @@ public final class SaveData {
         saveSub.write(Subscription.passiveMember+",");
         saveSub.write(Subscription.youthSwimmer+",");
         saveSub.write(Subscription.seniorSwimmer+",");
-        saveSub.write(Subscription.over60Swimmer+",");
         saveSub.flush();
     }
 
