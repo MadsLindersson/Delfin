@@ -1,4 +1,5 @@
 import java.io.FileNotFoundException;
+import java.io.IOException;
 import java.util.Scanner;
 
 public final class Subscription {
@@ -11,8 +12,45 @@ public final class Subscription {
     public static double over60Swimmer;
     public static Scanner input = new Scanner (System.in);
 
-    public static void editSubscriptionRates () {
+    public static void editSubscriptionRates () throws IOException {
         //Skal ændre i fields og kalde på SaveData.saveSubscriptionRatesInFile som gemmer dem i fil.
+        Scanner input = new Scanner(System.in);
+        System.out.println("""
+                What subscription rate would you like to change?
+                1. Passive members.
+                2. Swimmers under 18.
+                3. Swimmers over 18 and under 60.
+                4. Swimmers over 60.""");
+        int answer = input.nextInt();
+        switch (answer) {
+            case 1:
+                System.out.printf("""
+                        Current reate is %2d
+                        Enter new rate.""", passiveMember);
+                passiveMember = input.nextInt();
+                break;
+            case 2:
+                System.out.printf("""
+                        Current reate is %2d
+                        Enter new rate.""", youthSwimmer);
+                youthSwimmer = input.nextInt();
+                break;
+            case 3:
+                System.out.printf("""
+                        Current reate is %2d
+                        Enter new rate.""", seniorSwimmer);
+                seniorSwimmer = input.nextInt();
+                break;
+            case 4:
+                System.out.printf("""
+                        Current reate is %2f
+                        Enter new rate.""", over60Swimmer);
+                over60Swimmer = input.nextDouble();
+                break;
+            default:
+                System.out.println("Wrong input");
+        }
+        SaveData.saveSubscriptionRatesInFile();
     }
 
     //Returns the subscription rate for a specific member.

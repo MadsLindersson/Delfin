@@ -114,6 +114,7 @@ public final class MainMenu {
                                 Debt.checkDebt();
                                 break;
                             case 5:
+                                Subscription.editSubscriptionRates();
                                 break;
                             default:
                                 break;

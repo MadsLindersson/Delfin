@@ -1,5 +1,7 @@
 import java.io.*;
 
+import static java.lang.Double.parseDouble;
+
 public final class SaveData {
         public static BufferedWriter output;
 
@@ -22,11 +24,17 @@ public final class SaveData {
 
     private SaveData () {}
 
-    public static void saveSubscriptionRatesInFile ()   {
-        //Skal hive fat i Subscription fields og gemme dem i fil
+    public static void saveSubscriptionRatesInFile () throws IOException {
+        //Skal hive fat i Subscription fields og gemme dem i fil.
+        LoadData.readSubscriptionRatesFromFile();
+        BufferedWriter saveSub = new BufferedWriter(new FileWriter("SubscriptionRates.txt"));
+        saveSub.write(Subscription.passiveMember);
+        saveSub.write(Subscription.youthSwimmer);
+        saveSub.write(Subscription.seniorSwimmer);
+        saveSub.write(Subscription.over60Swimmer+"");
     }
 
-    //Writes the arraylist to 2 seperate files, 1 for members and one for competetive members.
+    //Writes the arraylist to 2 seperate files, 1 for members and one for competitive members.
     public static void saveDataInFile () throws IOException {
         for(Member member : Main.members)   {
             if (member instanceof CompetetiveMember) {
