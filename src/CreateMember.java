@@ -1,3 +1,4 @@
+import java.time.LocalDate;
 import java.util.Scanner;
 
 public class CreateMember {
@@ -5,9 +6,9 @@ public class CreateMember {
     public static void createMember() {
         Scanner scanner = new Scanner(System.in);
         System.out.println("1. Member");
-        System.out.println("2. Competetive Member");
+        System.out.println("2. Competitive Member");
         int answer = scanner.nextInt();
-        scanner.nextLine();
+        scanner.nextLine(); // Consume newline character
         if (answer == 1) {
             System.out.println("Enter member details:");
             System.out.println("Name: ");
@@ -28,7 +29,7 @@ public class CreateMember {
             Main.members.add(member);
         }
         if (answer == 2) {
-            System.out.println("Enter competetive member details:");
+            System.out.println("Enter competitive member details:");
             System.out.println("Name: ");
             String name = scanner.nextLine();
             System.out.println("Age: ");
@@ -43,26 +44,55 @@ public class CreateMember {
             boolean debt = scanner.nextBoolean();
             System.out.println("Debt amount: ");
             double debtAmount = scanner.nextDouble();
-            System.out.println("Are they on the crawl team?");
-            boolean crawl = scanner.nextBoolean();
-            System.out.println("Are they on the butterfly team?");
-            boolean butterfly = scanner.nextBoolean();
-            System.out.println("Are they on the backcrawl team?");
-            boolean backcrawl = scanner.nextBoolean();
-            System.out.println("Are they on the breast team?");
-            boolean breast = scanner.nextBoolean();
-            double bestTrainingCrawlTime = 0.0;
-            double bestButterflyTime = 0.0;
-            double bestBackcrawlTime = 0.0;
-            double bestBreastTime = 0.0;
-            double competitionCrawlTime = 0.0;
-            double competitionButterflyTime = 0.0;
-            double competitionBackcrawlTime = 0.0;
-            double competitionBreastTime = 0.0;
 
-            CompetetiveMember member = new CompetetiveMember(name, age, id,  status, ageGroup, debt, debtAmount, crawl, butterfly, backcrawl, breast,
-                    bestTrainingCrawlTime, bestButterflyTime, bestBackcrawlTime, bestBreastTime, competitionCrawlTime, competitionButterflyTime
-                    , competitionBackcrawlTime, competitionBreastTime);
+            // Initialize all swim team related fields to false or zero
+            boolean crawl = false;
+            boolean butterfly = false;
+            boolean backcrawl = false;
+            boolean breast = false;
+
+            double bestTrainingCrawlTime = 0.0;
+            LocalDate bestTrainingCrawlDate = null;
+            String trainingCrawlPlace = "";
+
+            double bestTrainingButterflyTime = 0.0;
+            LocalDate bestTrainingButterflyDate = null;
+            String trainingButterflyPlace = "";
+
+            double bestTrainingBackcrawlTime = 0.0;
+            LocalDate bestTrainingBackcrawlDate = null;
+            String trainingBackcrawlPlace = "";
+
+            double bestTrainingBreastTime = 0.0;
+            LocalDate bestTrainingBreastDate = null;
+            String trainingBreastPlace = "";
+
+            double competitionCrawlTime = 0.0;
+            LocalDate competitionCrawlDate = null;
+            String competitionCrawlPlace = "";
+
+            double competitionButterflyTime = 0.0;
+            LocalDate competitionButterflyDate = null;
+            String competitionButterflyPlace = "";
+
+            double competitionBackcrawlTime = 0.0;
+            LocalDate competitionBackcrawlDate = null;
+            String competitionBackcrawlPlace = "";
+
+            double competitionBreastTime = 0.0;
+            LocalDate competitionBreastDate = null;
+            String competitionBreastPlace = "";
+
+            CompetitiveMember member = new CompetitiveMember(name, age, id, status, ageGroup, debt, debtAmount,
+                    crawl, butterfly, backcrawl, breast,
+                    bestTrainingCrawlTime, bestTrainingCrawlDate, trainingCrawlPlace,
+                    bestTrainingButterflyTime, bestTrainingButterflyDate, trainingButterflyPlace,
+                    bestTrainingBackcrawlTime, bestTrainingBackcrawlDate, trainingBackcrawlPlace,
+                    bestTrainingBreastTime, bestTrainingBreastDate, trainingBreastPlace,
+                    competitionCrawlTime, competitionCrawlDate, competitionCrawlPlace,
+                    competitionButterflyTime, competitionButterflyDate, competitionButterflyPlace,
+                    competitionBackcrawlTime, competitionBackcrawlDate, competitionBackcrawlPlace,
+                    competitionBreastTime, competitionBreastDate, competitionBreastPlace);
             Main.members.add(member);
         }
         if (answer != 1 && answer != 2) {
