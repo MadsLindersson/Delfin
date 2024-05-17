@@ -134,4 +134,9 @@ public class CompetetiveMember extends Member {
     public void setCompetitionBreastTime(double competitionBreastTime) {
         this.competitionBreastTime = competitionBreastTime;
     }
+
+    public String toString(){
+        return getName() + getId() + getBestCrawlTime() + getBestBackcrawlTime() +
+                getBestBreastTime() + getBestButterflyTime();
+    }
 }
