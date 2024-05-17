@@ -25,13 +25,13 @@ public final class SaveData {
     private SaveData () {}
 
     public static void saveSubscriptionRatesInFile () throws IOException {
-        //Skal hive fat i Subscription fields og gemme dem i fil.
-        LoadData.readSubscriptionRatesFromFile();
+        //Skal hive fat i Subscription fields og gemme dem i fil. 500,1000,1600,1200
         BufferedWriter saveSub = new BufferedWriter(new FileWriter("SubscriptionRates.txt"));
-        saveSub.write(Subscription.passiveMember);
-        saveSub.write(Subscription.youthSwimmer);
-        saveSub.write(Subscription.seniorSwimmer);
-        saveSub.write(Subscription.over60Swimmer+"");
+        saveSub.write(Subscription.passiveMember+",");
+        saveSub.write(Subscription.youthSwimmer+",");
+        saveSub.write(Subscription.seniorSwimmer+",");
+        saveSub.write(Subscription.over60Swimmer+",");
+        saveSub.flush();
     }
 
     //Writes the arraylist to 2 seperate files, 1 for members and one for competitive members.
