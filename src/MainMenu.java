@@ -98,6 +98,7 @@ public final class MainMenu {
 
                         switch (answer3) {
                             case 1:
+                                Subscription.showSubscriptionRates();
                                 break;
                             case 2:
                                 Subscription.showYearlySum();
@@ -114,6 +115,7 @@ public final class MainMenu {
                                 Debt.checkDebt();
                                 break;
                             case 5:
+                                Subscription.editSubscriptionRates();
                                 break;
                             default:
                                 break;

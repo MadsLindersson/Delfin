@@ -83,7 +83,7 @@ public final class LoadData {
             Subscription.passiveMember = readLine.nextInt();
             Subscription.youthSwimmer = readLine.nextInt();
             Subscription.seniorSwimmer = readLine.nextInt();
-            Subscription.over60Swimmer = parseDouble(readLine.next());
+            Subscription.over60Swimmer = Subscription.seniorSwimmer * 0.75;
             readFile3.reset();
     }
 

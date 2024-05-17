@@ -1,1 +1,0 @@
-Flemming,22,2,true,true,false,0.0,true,true,false,false,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,
