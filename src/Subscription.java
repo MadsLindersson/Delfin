@@ -12,6 +12,10 @@ public final class Subscription {
     public static double over60Swimmer;
     public static Scanner input = new Scanner (System.in);
 
+    public static void showSubscriptionRates () {
+
+    }
+
     public static void editSubscriptionRates () throws IOException {
         //Skal ændre i fields og kalde på SaveData.saveSubscriptionRatesInFile som gemmer dem i fil.
         Scanner input = new Scanner(System.in);
