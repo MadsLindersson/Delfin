@@ -31,7 +31,7 @@ public final class LoadData {
     }
 
     public static void loadDataFromFiles () {
-
+        //Loads Member.txt file and creates member obj.
         while (readFile.hasNextLine()) {
             String line = readFile.nextLine();
             Scanner readLine = new Scanner(line).useDelimiter(",");
@@ -44,7 +44,7 @@ public final class LoadData {
             double debtAmount = parseDouble(readLine.next());
             Main.members.add(new Member(name, age, ID, status, ageGroup, debt, debtAmount));
         }
-
+        //Loads CompetitiveMember.txt file and creates competitive member obj.
         while (readFile2.hasNextLine()) {
             String line = readFile2.nextLine();
             Scanner readLine = new Scanner (line).useDelimiter(",");
