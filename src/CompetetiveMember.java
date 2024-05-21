@@ -1,51 +1,51 @@
 public class CompetetiveMember extends Member {
-    private boolean crawl;
+        private boolean crawl;
 
-    private boolean butterfly;
+        private boolean butterfly;
 
-    private boolean backcrawl;
+        private boolean backcrawl;
 
-    private boolean breast;
+        private boolean breast;
 
-    private double bestCrawlTime;
+        private double bestCrawlTime;
 
-    private double bestButterflyTime;
+        private double bestButterflyTime;
 
-    private double bestBackcrawlTime;
+        private double bestBackcrawlTime;
 
-    private double bestBreastTime;
+        private double bestBreastTime;
 
-    private double competitionCrawlTime;
+        private double competitionCrawlTime;
 
-    private double competitionButterflyTime;
+        private double competitionButterflyTime;
 
-    private double competitionBackcrawlTime;
+        private double competitionBackcrawlTime;
 
-    private double competitionBreastTime;
+        private double competitionBreastTime;
 
-    private String dateCrawl; //Date of the best time during training
+        private String dateCrawl; //Date of the best time during training
 
-    private String dateButterfly;
+        private String dateButterfly;
 
-    private String dateBackcrawl;
+        private String dateBackcrawl;
 
-    private String dateBreast;
+        private String dateBreast;
 
-    private String dateCrawlCompetetive; //Date of the best time at a competetion
+        private String dateCrawlCompetetive; //Date of the best time at a competetion
 
-    private String dateButterflyCompetetive;
+        private String dateButterflyCompetetive;
 
-    private String dateBackcrawlCompetetive;
+        private String dateBackcrawlCompetetive;
 
-    private String dateBreastCompetetive;
+        private String dateBreastCompetetive;
 
-    private String placeCrawl; //The place of where the best time during a competetion was acquired.
+        private String placeCrawl; //The place of where the best time during a competetion was acquired.
 
-    private String placeButterfly;
+        private String placeButterfly;
 
-    private String placeBackcrawl;
+        private String placeBackcrawl;
 
-    private String placeBreast;
+        private String placeBreast;
 
     public CompetetiveMember(String name, int age, int id, boolean status, boolean ageGroup, boolean debt,
                              double debtAmount, boolean crawl, boolean butterfly, boolean backcrawl, boolean breast,
