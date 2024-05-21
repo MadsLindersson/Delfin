@@ -278,8 +278,8 @@ public class CompetetiveMember extends Member implements Comparator {
     }
 
     public String toString(){
-        return getName() + getId() + getBestCrawlTime() + getBestBackcrawlTime() +
-                getBestBreastTime() + getBestButterflyTime();
+        return getName() + ", " + getId() + ", " + getBestCrawlTime() + ", " + getBestBackcrawlTime() + ", " +
+                getBestBreastTime() + ", " + getBestButterflyTime();
     }
 
     @Override
