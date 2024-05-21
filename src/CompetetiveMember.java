@@ -23,7 +23,6 @@ public class CompetetiveMember extends Member {
 
     private double competitionBreastTime;
 
-
     public CompetetiveMember(String name, int age, int id, boolean status, boolean ageGroup, boolean debt, double debtAmount, boolean crawl, boolean butterfly, boolean backcrawl, boolean breast, double bestCrawlTime, double bestButterflyTime, double bestBackcrawlTime, double bestBreastTime, double competitionCrawlTime, double competitionButterflyTime, double competitionBackcrawlTime, double competitionBreastTime) {
         super(name, age, id, status, ageGroup, debt, debtAmount);
         this.crawl = crawl;
@@ -134,5 +133,10 @@ public class CompetetiveMember extends Member {
 
     public void setCompetitionBreastTime(double competitionBreastTime) {
         this.competitionBreastTime = competitionBreastTime;
+    }
+
+    public String toString(){
+        return getName() + getId() + getBestCrawlTime() + getBestBackcrawlTime() +
+                getBestBreastTime() + getBestButterflyTime();
     }
 }
