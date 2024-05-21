@@ -1,4 +1,6 @@
-public class CompetetiveMember extends Member {
+import java.util.Comparator;
+
+public class CompetetiveMember extends Member implements Comparator {
         private boolean crawl;
 
         private boolean butterfly;
@@ -278,5 +280,11 @@ public class CompetetiveMember extends Member {
     public String toString(){
         return getName() + getId() + getBestCrawlTime() + getBestBackcrawlTime() +
                 getBestBreastTime() + getBestButterflyTime();
+    }
+
+    @Override
+    public int compare(Object o1, Object o2) {
+
+        return 0;
     }
 }

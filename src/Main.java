@@ -8,6 +8,11 @@ public class Main {
     public static void main(String[] args) throws IOException {
         LoadData.loadDataFromFiles();
         LoadData.readSubscriptionRatesFromFile();
+        ShowCompMembers.sortCompMembers();
+        SortCompetitiveMembers.sortCrawlTime();
+        SortCompetitiveMembers.sortBackcrawlTime();
+        SortCompetitiveMembers.sortBreastTime();
+        SortCompetitiveMembers.sortButterflyTime();
         MainMenu.menu();
 
 
