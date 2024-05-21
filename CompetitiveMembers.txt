@@ -1,5 +1,6 @@
-JohnDoe,25,12345,true,false,true,1500.5,true,false,true,true,68.0,55.67,98.0,99.0,52.34,56.78,59.12,61.34,,2023-05-20,,,2023-08-10,2023-09-12,2023-10-15,2023-11-18,NewYork,LosAngeles,Chicago,SanFrancisco,
+JohnDoe,25,12345,true,true,true,1500.5,true,false,true,true,68.0,55.67,98.0,99.0,52.34,56.78,59.12,61.34,,2023-05-20,,,2023-08-10,2023-09-12,2023-10-15,2023-11-18,NewYork,LosAngeles,Chicago,SanFrancisco,
 JaneSmith,30,67890,false,true,false,0.0,false,true,false,true,50.12,54.89,57.45,60.78,51.67,55.23,58.56,60.89,2023-03-10,2023-04-15,2023-05-20,2023-06-25,2023-07-05,2023-08-10,2023-09-15,2023-10-20,Boston,Miami,Denver,Houston,
 MikeJohnson,28,54321,true,true,true,300.75,true,true,false,false,49.98,53.67,56.34,59.45,50.89,54.23,57.12,59.34,2023-02-20,2023-03-25,2023-04-30,2023-06-05,2023-07-10,2023-08-15,2023-09-20,2023-10-25,Seattle,Portland,Austin,SanDiego,
-EmilyBrown,22,98765,false,false,true,1250.0,false,false,true,true,52.67,57.34,60.12,63.45,53.45,58.12,61.23,63.56,2023-01-05,2023-02-10,2023-03-15,2023-04-20,2023-05-25,2023-06-30,2023-08-05,2023-09-10,Orlando,LasVegas,Atlanta,Philadelphia,
+EmilyBrown,22,98765,false,true,true,1250.0,false,false,true,true,52.67,57.34,60.12,63.45,53.45,58.12,61.23,63.56,2023-01-05,2023-02-10,2023-03-15,2023-04-20,2023-05-25,2023-06-30,2023-08-05,2023-09-10,Orlando,LasVegas,Atlanta,Philadelphia,
 ChrisGreen,35,11223,true,true,false,0.0,true,true,true,false,48.56,52.34,55.12,58.45,670.0,1288.0,12999.0,58.78,2023-03-15,2023-04-20,2023-05-25,2023-06-30,,,,2023-10-20,Hillerod,aLLEROD,Kobenhavn,Minneapolis,
+AlexG,14,11224,true,false,false,0.0,true,true,true,false,48.56,52.34,55.12,58.45,670.0,1288.0,12999.0,58.78,2023-03-15,2023-04-20,2023-05-25,2023-06-30,,,,2023-10-20,Hillerod,aLLEROD,Kobenhavn,Minneapolis,
