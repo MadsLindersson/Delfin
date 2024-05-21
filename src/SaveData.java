@@ -36,6 +36,7 @@ public final class SaveData {
     //Writes the arraylist to 2 seperate files, 1 for members and one for competitive members.
     public static void saveDataInFile () throws IOException {
         for(Member member : Main.members)   {
+            //Prints competitive member obj's to file.
             if (member instanceof CompetetiveMember) {
                 output2.write(member.getName() + ",");
                 output2.write(member.getAge() + ",");
@@ -56,8 +57,21 @@ public final class SaveData {
                 output2.write(((CompetetiveMember) member).getCompetitionButterflyTime() + ",");
                 output2.write(((CompetetiveMember) member).getCompetitionBackcrawlTime() + ",");
                 output2.write(((CompetetiveMember) member).getCompetitionBreastTime() + ",");
+                output2.write(((CompetetiveMember) member).getDateCrawl() + ",");
+                output2.write(((CompetetiveMember) member).getDateButterfly() + ",");
+                output2.write(((CompetetiveMember) member).getDateBackcrawl() + ",");
+                output2.write(((CompetetiveMember) member).getDateBreast() + ",");
+                output2.write(((CompetetiveMember) member).getDateCrawlCompetetive() + ",");
+                output2.write(((CompetetiveMember) member).getDateButterflyCompetetive() + ",");
+                output2.write(((CompetetiveMember) member).getDateBackcrawlCompetetive() + ",");
+                output2.write(((CompetetiveMember) member).getDateBreastCompetetive() + ",");
+                output2.write(((CompetetiveMember) member).getPlaceCrawl() + ",");
+                output2.write(((CompetetiveMember) member).getPlaceButterfly() + ",");
+                output2.write(((CompetetiveMember) member).getPlaceBackcrawl() + ",");
+                output2.write(((CompetetiveMember) member).getPlaceBreast() + ",");
                 output2.newLine();
                 output2.flush();
+                //Prints member obj's to file.
             }else {
                 output.write(member.getName() + ",");
                 output.write(member.getAge() + ",");

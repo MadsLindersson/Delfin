@@ -31,7 +31,7 @@ public final class LoadData {
     }
 
     public static void loadDataFromFiles () {
-
+        //Loads Member.txt file and creates member obj.
         while (readFile.hasNextLine()) {
             String line = readFile.nextLine();
             Scanner readLine = new Scanner(line).useDelimiter(",");
@@ -44,7 +44,7 @@ public final class LoadData {
             double debtAmount = parseDouble(readLine.next());
             Main.members.add(new Member(name, age, ID, status, ageGroup, debt, debtAmount));
         }
-
+        //Loads CompetitiveMember.txt file and creates competitive member obj.
         while (readFile2.hasNextLine()) {
             String line = readFile2.nextLine();
             Scanner readLine = new Scanner (line).useDelimiter(",");
@@ -67,9 +67,23 @@ public final class LoadData {
             double competitionButterflyTime = parseDouble(readLine.next());
             double competitionBackcrawlTime = parseDouble(readLine.next());
             double competitionBreastTime = parseDouble(readLine.next());
+            String dateCrawl = readLine.next();
+            String dateButterfly = readLine.next();
+            String dateBackcrawl = readLine.next();
+            String dateBreast = readLine.next();
+            String dateCrawlCompetitive = readLine.next();
+            String dateButterflyCompetitive = readLine.next();
+            String dateBackcrawlCompetitive = readLine.next();
+            String dateBreastCompetitive = readLine.next();
+            String placeCrawl = readLine.next();
+            String placeButterfly = readLine.next();
+            String placeBackcrawl = readLine.next();
+            String placeBreast = readLine.next();
             Main.members.add(new CompetetiveMember(name, age, ID, status, ageGroup, debt, debtAmount, crawl, butterfly,
                     backcrawl,breast,bestTrainingCrawlTime, bestButterflyTime,bestBackcrawlTime,bestBreastTime,competitioncrawlTime,competitionButterflyTime,
-                    competitionBackcrawlTime, competitionBreastTime));
+                    competitionBackcrawlTime, competitionBreastTime, dateCrawl, dateButterfly, dateBackcrawl,dateBreast,
+                    dateCrawlCompetitive, dateButterflyCompetitive, dateBackcrawlCompetitive, dateBreastCompetitive,placeCrawl,
+                    placeButterfly, placeBackcrawl, placeBreast));
         }
             readFile.reset();
             readFile2.reset();
