@@ -15,18 +15,19 @@ public class ShowCompMembers {
     public ShowCompMembers() {}
 
     public static void sortCompMembers() {
-        for(Member member : Main.members){
-            switch (4){
+        for (Member member : Main.members) {
+            switch (4) {
                 case 1:
-                    if (((CompetetiveMember) member).isCrawl()){
+                    if (((CompetetiveMember) member).isCrawl()) {
                         juniorCrawlList.add((CompetetiveMember) member);
-                    }else if (((CompetetiveMember) member).isButterfly()){
+                    } else if (((CompetetiveMember) member).isButterfly()) {
                         juniorButterflyList.add((CompetetiveMember) member);
-                    }else if (((CompetetiveMember) member).isBackcrawl()){
+                    } else if (((CompetetiveMember) member).isBackcrawl()) {
                         juniorBackcrawlList.add((CompetetiveMember) member);
-                    }else if (((CompetetiveMember) member).isBreast()){
+                    } else if (((CompetetiveMember) member).isBreast()) {
                         juniorBreastList.add((CompetetiveMember) member);
-                break;
+                        break;
+                    }
             }
         }
     }
