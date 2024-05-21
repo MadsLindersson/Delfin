@@ -78,6 +78,11 @@ public final class MainMenu {
                                 break;
                             case 4:
                                 break;
+                            case 5:
+                                break;
+                            case 6:
+                                ShowCompMembers.sortCompMembers();
+                                ShowCompMembers.listOfCompetetiveMembers();
                             default:
                                 break;
                         }
