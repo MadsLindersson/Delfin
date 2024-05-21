@@ -99,7 +99,7 @@ public final class ShowCompMembers {
                                 break;
                             case 3:
                                 for (CompetetiveMember member : juniorBackcrawlList) {
-                                    if (member.isCrawl()) {
+                                    if (member.isBackcrawl()) {
                                         System.out.println("Jr. Backcrawl team member:");
                                         System.out.println("Name: " + member.getName());
                                         System.out.println("Age: " + member.getAge());
@@ -114,7 +114,7 @@ public final class ShowCompMembers {
                                 break;
                             case 4:
                                 for (CompetetiveMember member : juniorBreastList) {
-                                    if (member.isCrawl()) {
+                                    if (member.isBreast()) {
                                         System.out.println("Jr. Breast team member:");
                                         System.out.println("Name: " + member.getName());
                                         System.out.println("Age: " + member.getAge());
@@ -129,6 +129,7 @@ public final class ShowCompMembers {
                                 break;
                             case 0:
                                 c1 = false;
+                                break;
                             default:
                                 System.out.println("Invalid choice");
                                 break;
@@ -180,7 +181,7 @@ public final class ShowCompMembers {
                                 break;
                             case 3:
                                 for (CompetetiveMember member : seniorBackcrawlList) {
-                                    if (member.isCrawl()) {
+                                    if (member.isBackcrawl()) {
                                         System.out.println("Sr. Backcrawl team member:");
                                         System.out.println("Name: " + member.getName());
                                         System.out.println("Age: " + member.getAge());
@@ -195,7 +196,7 @@ public final class ShowCompMembers {
                                 break;
                             case 4:
                                 for (CompetetiveMember member : seniorBreastList) {
-                                    if (member.isCrawl()) {
+                                    if (member.isBreast()) {
                                         System.out.println("Sr. Breast team member:");
                                         System.out.println("Name: " + member.getName());
                                         System.out.println("Age: " + member.getAge());
@@ -215,9 +216,7 @@ public final class ShowCompMembers {
                                 System.out.println("Invalid choice");
                                 break;
                         }
-                        break;
                     }
-                    break;
                 case 0:
                     running = false;
                     break;
