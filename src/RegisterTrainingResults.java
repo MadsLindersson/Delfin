@@ -35,24 +35,40 @@ public class RegisterTrainingResults {
             System.out.print("Enter best training crawl time: ");
             double bestTrainingCrawlTime = scanner.nextDouble();
             selectedMember.setBestCrawlTime(bestTrainingCrawlTime);
+            System.out.print("Enter the date the time was acquired: ");
+            String crawlDate = scanner.nextLine();
+            scanner.nextLine(); // Consume newline left-over
+            selectedMember.setDateCrawl(crawlDate);
         }
 
         if (selectedMember.isButterfly()) {
             System.out.print("Enter best training butterfly time: ");
             double bestTrainingButterflyTime = scanner.nextDouble();
             selectedMember.setBestButterflyTime(bestTrainingButterflyTime);
+            System.out.println("Enter the date the time was acquired: ");
+            String butterflyDate = scanner.nextLine();
+            scanner.nextLine(); // Consume newline left-over
+            selectedMember.setDateButterfly(butterflyDate);
         }
 
         if (selectedMember.isBackcrawl()) {
             System.out.print("Enter best training backcrawl time: ");
             double bestTrainingBackcrawlTime = scanner.nextDouble();
             selectedMember.setBestBackcrawlTime(bestTrainingBackcrawlTime);
+            System.out.println("Enter the date the time was acquired: ");
+            String backcrawlDate = scanner.nextLine();
+            scanner.nextLine(); // Consume newline left-over
+            selectedMember.setDateBackcrawl(backcrawlDate);
         }
 
         if (selectedMember.isBreast()) {
             System.out.print("Enter best training breast time: ");
             double bestTrainingBreastTime = scanner.nextDouble();
             selectedMember.setBestBreastTime(bestTrainingBreastTime);
+            System.out.println("Enter the date the time was acquired: ");
+            String breastDate = scanner.nextLine();
+            scanner.nextLine(); // Consume newline left-over
+            selectedMember.setDateBreast(breastDate);
         }
 
         System.out.println("Training results updated for member: " + selectedMember.getName());
