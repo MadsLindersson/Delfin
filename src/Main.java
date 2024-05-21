@@ -9,7 +9,5 @@ public class Main {
         LoadData.loadDataFromFiles();
         LoadData.readSubscriptionRatesFromFile();
         MainMenu.menu();
-
-
     }
 }

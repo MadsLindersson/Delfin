@@ -63,6 +63,7 @@ public final class MainMenu {
                                 4. Show training results for all swimmers.
                                 5. Show competition results.
                                 6. Show all competetitive swimmers.
+                                7. Show assigned coaches.
                                 0. Go back.""");
 
                         answer2 = input.nextInt();
@@ -77,6 +78,13 @@ public final class MainMenu {
                                 RegisterCompetitionResults.registerCompetitionResults();
                                 break;
                             case 4:
+                                break;
+                            case 5:
+                                break;
+                            case 6:
+                                break;
+                            case 7:
+                                AssignCoach.showAssignedCoach();
                                 break;
                             default:
                                 break;
