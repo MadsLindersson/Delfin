@@ -31,44 +31,70 @@ public class RegisterTrainingResults {
 
         System.out.println("Updating training results for: " + selectedMember.getName());
 
-        if (selectedMember.isCrawl()) {
-            System.out.print("Enter best training crawl time: ");
-            double bestTrainingCrawlTime = scanner.nextDouble();
-            selectedMember.setBestCrawlTime(bestTrainingCrawlTime);
-            System.out.print("Enter the date the time was acquired: ");
-            String crawlDate = scanner.nextLine();
-            scanner.nextLine(); // Consume newline left-over
-            selectedMember.setDateCrawl(crawlDate);
-        }
+        System.out.println("Select the training to update:");
+        System.out.println("1. Crawl");
+        System.out.println("2. Butterfly");
+        System.out.println("3. Backcrawl");
+        System.out.println("4. Breast");
 
-        if (selectedMember.isButterfly()) {
-            System.out.print("Enter best training butterfly time: ");
-            double bestTrainingButterflyTime = scanner.nextDouble();
-            selectedMember.setBestButterflyTime(bestTrainingButterflyTime);
-            System.out.println("Enter the date the time was acquired: ");
-            String butterflyDate = scanner.nextLine();
-            scanner.nextLine(); // Consume newline left-over
-            selectedMember.setDateButterfly(butterflyDate);
-        }
+        int choice = scanner.nextInt();
+        scanner.nextLine(); // Consume newline left-over
 
-        if (selectedMember.isBackcrawl()) {
-            System.out.print("Enter best training backcrawl time: ");
-            double bestTrainingBackcrawlTime = scanner.nextDouble();
-            selectedMember.setBestBackcrawlTime(bestTrainingBackcrawlTime);
-            System.out.println("Enter the date the time was acquired: ");
-            String backcrawlDate = scanner.nextLine();
-            scanner.nextLine(); // Consume newline left-over
-            selectedMember.setDateBackcrawl(backcrawlDate);
-        }
-
-        if (selectedMember.isBreast()) {
-            System.out.print("Enter best training breast time: ");
-            double bestTrainingBreastTime = scanner.nextDouble();
-            selectedMember.setBestBreastTime(bestTrainingBreastTime);
-            System.out.println("Enter the date the time was acquired: ");
-            String breastDate = scanner.nextLine();
-            scanner.nextLine(); // Consume newline left-over
-            selectedMember.setDateBreast(breastDate);
+        switch (choice) {
+            case 1:
+                if (selectedMember.isCrawl()) {
+                    System.out.print("Enter best training crawl time: ");
+                    double bestTrainingCrawlTime = scanner.nextDouble();
+                    selectedMember.setBestCrawlTime(bestTrainingCrawlTime);
+                    scanner.nextLine(); // Consume newline left-over
+                    System.out.print("Enter the date the time was acquired: ");
+                    String crawlDate = scanner.nextLine();
+                    selectedMember.setDateCrawl(crawlDate);
+                } else {
+                    System.out.println("Crawl is not applicable for this member.");
+                }
+                break;
+            case 2:
+                if (selectedMember.isButterfly()) {
+                    System.out.print("Enter best training butterfly time: ");
+                    double bestTrainingButterflyTime = scanner.nextDouble();
+                    selectedMember.setBestButterflyTime(bestTrainingButterflyTime);
+                    scanner.nextLine(); // Consume newline left-over
+                    System.out.print("Enter the date the time was acquired: ");
+                    String butterflyDate = scanner.nextLine();
+                    selectedMember.setDateButterfly(butterflyDate);
+                } else {
+                    System.out.println("Butterfly is not applicable for this member.");
+                }
+                break;
+            case 3:
+                if (selectedMember.isBackcrawl()) {
+                    System.out.print("Enter best training backcrawl time: ");
+                    double bestTrainingBackcrawlTime = scanner.nextDouble();
+                    selectedMember.setBestBackcrawlTime(bestTrainingBackcrawlTime);
+                    scanner.nextLine(); // Consume newline left-over
+                    System.out.print("Enter the date the time was acquired: ");
+                    String backcrawlDate = scanner.nextLine();
+                    selectedMember.setDateBackcrawl(backcrawlDate);
+                } else {
+                    System.out.println("Backcrawl is not applicable for this member.");
+                }
+                break;
+            case 4:
+                if (selectedMember.isBreast()) {
+                    System.out.print("Enter best training breast time: ");
+                    double bestTrainingBreastTime = scanner.nextDouble();
+                    selectedMember.setBestBreastTime(bestTrainingBreastTime);
+                    scanner.nextLine(); // Consume newline left-over
+                    System.out.print("Enter the date the time was acquired: ");
+                    String breastDate = scanner.nextLine();
+                    selectedMember.setDateBreast(breastDate);
+                } else {
+                    System.out.println("Breast is not applicable for this member.");
+                }
+                break;
+            default:
+                System.out.println("Invalid choice. Please select a valid training style.");
         }
 
         System.out.println("Training results updated for member: " + selectedMember.getName());

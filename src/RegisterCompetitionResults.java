@@ -29,64 +29,84 @@ public class RegisterCompetitionResults {
             return;
         }
 
-        System.out.println("Updating competition results for: " + selectedMember.getName());
+        System.out.println("Select the competition to update:");
+        System.out.println("1. Crawl");
+        System.out.println("2. Butterfly");
+        System.out.println("3. Backcrawl");
+        System.out.println("4. Breast");
 
-        if (selectedMember.isCrawl()) {
-            System.out.print("Enter competition crawl time: ");
-            double competitionCrawlTime = scanner.nextDouble();
-            selectedMember.setCompetitionCrawlTime(competitionCrawlTime);
-            System.out.println("Enter the date the time was acquired");
-            String crawlDate = scanner.nextLine();
-            scanner.nextLine(); // Consume newline left-over
-            selectedMember.setDateCrawlCompetetive(crawlDate);
-            System.out.println("Enter the place the time was acquired");
-            String crawlPlace = scanner.nextLine();
-            scanner.nextLine(); // Consume newline left-over
-            selectedMember.setPlaceCrawl(crawlPlace);
+        int choice = scanner.nextInt();
+        scanner.nextLine(); // Consume newline left-over
+
+        switch (choice) {
+            case 1:
+                if (selectedMember.isCrawl()) {
+                    System.out.print("Enter competition crawl time: ");
+                    double competitionCrawlTime = scanner.nextDouble();
+                    selectedMember.setCompetitionCrawlTime(competitionCrawlTime);
+                    scanner.nextLine(); // Consume newline left-over
+                    System.out.println("Enter the date the time was acquired: ");
+                    String crawlDate = scanner.nextLine();
+                    selectedMember.setDateCrawlCompetetive(crawlDate);
+                    System.out.println("Enter the place the time was acquired: ");
+                    String crawlPlace = scanner.nextLine();
+                    selectedMember.setPlaceCrawl(crawlPlace);
+                } else {
+                    System.out.println("Crawl is not applicable for this member.");
+                }
+                break;
+            case 2:
+                if (selectedMember.isButterfly()) {
+                    System.out.print("Enter competition butterfly time: ");
+                    double competitionButterflyTime = scanner.nextDouble();
+                    selectedMember.setCompetitionButterflyTime(competitionButterflyTime);
+                    scanner.nextLine(); // Consume newline left-over
+                    System.out.println("Enter the date the time was acquired: ");
+                    String butterflyDate = scanner.nextLine();
+                    selectedMember.setDateButterflyCompetetive(butterflyDate);
+                    System.out.println("Enter the place the time was acquired: ");
+                    String butterflyPlace = scanner.nextLine();
+                    selectedMember.setPlaceButterfly(butterflyPlace);
+                } else {
+                    System.out.println("Butterfly is not applicable for this member.");
+                }
+                break;
+            case 3:
+                if (selectedMember.isBackcrawl()) {
+                    System.out.print("Enter competition backcrawl time: ");
+                    double competitionBackcrawlTime = scanner.nextDouble();
+                    selectedMember.setCompetitionBackcrawlTime(competitionBackcrawlTime);
+                    scanner.nextLine(); // Consume newline left-over
+                    System.out.println("Enter the date the time was acquired: ");
+                    String backcrawlDate = scanner.nextLine();
+                    selectedMember.setDateBackcrawlCompetetive(backcrawlDate);
+                    System.out.println("Enter the place the time was acquired: ");
+                    String backcrawlPlace = scanner.nextLine();
+                    selectedMember.setPlaceBackcrawl(backcrawlPlace);
+                } else {
+                    System.out.println("Backcrawl is not applicable for this member.");
+                }
+                break;
+            case 4:
+                if (selectedMember.isBreast()) {
+                    System.out.print("Enter competition breast time: ");
+                    double competitionBreastTime = scanner.nextDouble();
+                    selectedMember.setCompetitionBreastTime(competitionBreastTime);
+                    scanner.nextLine(); // Consume newline left-over
+                    System.out.println("Enter the date the time was acquired: ");
+                    String breastDate = scanner.nextLine();
+                    selectedMember.setDateBreastCompetetive(breastDate);
+                    System.out.println("Enter the place the time was acquired: ");
+                    String breastPlace = scanner.nextLine();
+                    selectedMember.setPlaceBreast(breastPlace);
+                } else {
+                    System.out.println("Breast is not applicable for this member.");
+                }
+                break;
+            default:
+                System.out.println("Invalid choice. Please select a valid competition style.");
         }
 
-        if (selectedMember.isButterfly()) {
-            System.out.print("Enter competition butterfly time: ");
-            double competitionButterflyTime = scanner.nextDouble();
-            selectedMember.setCompetitionButterflyTime(competitionButterflyTime);
-            System.out.println("Enter the date the time was acquired");
-            String butterflyDate = scanner.nextLine();
-            scanner.nextLine(); // Consume newline left-over
-            selectedMember.setDateButterflyCompetetive(butterflyDate);
-            System.out.println("Enter the place the time was acquired");
-            String butterflyPlace = scanner.nextLine();
-            scanner.nextLine(); // Consume newline left-over
-            selectedMember.setPlaceButterfly(butterflyPlace);
-        }
 
-        if (selectedMember.isBackcrawl()) {
-            System.out.print("Enter competition backcrawl time: ");
-            double competitionBackcrawlTime = scanner.nextDouble();
-            selectedMember.setCompetitionBackcrawlTime(competitionBackcrawlTime);
-            System.out.println("Enter the date the time was acquired");
-            String backcrawlDate = scanner.nextLine();
-            scanner.nextLine(); // Consume newline left-over
-            selectedMember.setDateBackcrawlCompetetive(backcrawlDate);
-            System.out.println("Enter the place the time was acquired");
-            String backcrawlPlace = scanner.nextLine();
-            scanner.nextLine(); // Consume newline left-over
-            selectedMember.setPlaceBackcrawl(backcrawlPlace);
-        }
-
-        if (selectedMember.isBreast()) {
-            System.out.print("Enter competition breast time: ");
-            double competitionBreastTime = scanner.nextDouble();
-            selectedMember.setCompetitionBreastTime(competitionBreastTime);
-            System.out.println("Enter the date the time was acquired");
-            String breastDate = scanner.nextLine();
-            scanner.nextLine(); // Consume newline left-over
-            selectedMember.setDateBreastCompetetive(breastDate);
-            System.out.println("Enter the place the time was acquired");
-            String breastPlace = scanner.nextLine();
-            scanner.nextLine(); // Consume newline left-over
-            selectedMember.setPlaceBreast(breastPlace);
-        }
-
-        System.out.println("Competition results updated for member: " + selectedMember.getName());
     }
 }
