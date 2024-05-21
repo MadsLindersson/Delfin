@@ -9,7 +9,7 @@ public final class SortCompetitiveMembers {
 
         for(int i = 0; i < ShowCompMembers.juniorButterflyList.size() - 1; i++)  {
             swapped = false;
-            for(int j = 0; j < ShowCompMembers.juniorButterflyList.size()-1; i++)   {
+            for(int j = 0; j < ShowCompMembers.juniorButterflyList.size()-1; j++)   {
                 if(ShowCompMembers.juniorButterflyList.get(j).getBestButterflyTime() > ShowCompMembers.juniorButterflyList.get(j+1).getBestButterflyTime()) {
                     CompetetiveMember temp = ShowCompMembers.juniorButterflyList.get(j);
                     ShowCompMembers.juniorButterflyList.set(j, ShowCompMembers.juniorButterflyList.get(j + 1));

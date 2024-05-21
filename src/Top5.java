@@ -10,7 +10,7 @@ public final class Top5  {
             System.out.println(member);
         }
 
-        for(Member member : ShowCompMembers.juniorCrawlList)    {
+        /*for(Member member : ShowCompMembers.juniorCrawlList)    {
             System.out.println(member);
         }
 
@@ -36,6 +36,6 @@ public final class Top5  {
 
         for(Member member : ShowCompMembers.seniorBackcrawlList)    {
             System.out.println(member);
-        }
+        }*/
     }
 }
