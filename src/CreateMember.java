@@ -59,10 +59,24 @@ public class CreateMember {
             double competitionButterflyTime = 0.0;
             double competitionBackcrawlTime = 0.0;
             double competitionBreastTime = 0.0;
+            String dateCrawl = null; //Date of the best time during training
+            String dateButterfly = null;
+            String dateBackcrawl = null;
+            String dateBreast = null;
+            String dateCrawlCompetetive = null; //Date of the best time at a competetion
+            String dateButterflyCompetetive = null;
+            String dateBackcrawlCompetetive = null;
+            String dateBreastCompetetive = null;
+            String placeCrawl = null; //The place of where the best time during a competetion was acquired.
+            String placeButterfly = null;
+            String placeBackcrawl = null;
+            String placeBreast = null;
+
 
             CompetetiveMember member = new CompetetiveMember(name, age, id,  status, ageGroup, debt, debtAmount, crawl, butterfly, backcrawl, breast,
                     bestTrainingCrawlTime, bestButterflyTime, bestBackcrawlTime, bestBreastTime, competitionCrawlTime, competitionButterflyTime
-                    , competitionBackcrawlTime, competitionBreastTime);
+                    , competitionBackcrawlTime, competitionBreastTime, dateCrawl, dateButterfly, dateBackcrawl, dateBreast, dateCrawlCompetetive,
+                    dateButterflyCompetetive, dateBackcrawlCompetetive, dateBreastCompetetive, placeCrawl, placeButterfly, placeBackcrawl, placeBreast);
             Main.members.add(member);
         }
         if (answer != 1 && answer != 2) {

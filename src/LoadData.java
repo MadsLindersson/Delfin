@@ -67,7 +67,7 @@ public final class LoadData {
             double competitionButterflyTime = parseDouble(readLine.next());
             double competitionBackcrawlTime = parseDouble(readLine.next());
             double competitionBreastTime = parseDouble(readLine.next());
-            Main.members.add(new CompetitiveMember(name, age, ID, status, ageGroup, debt, debtAmount, crawl, butterfly,
+            Main.members.add(new CompetetiveMember(name, age, ID, status, ageGroup, debt, debtAmount, crawl, butterfly,
                     backcrawl,breast,bestTrainingCrawlTime, bestButterflyTime,bestBackcrawlTime,bestBreastTime,competitioncrawlTime,competitionButterflyTime,
                     competitionBackcrawlTime, competitionBreastTime));
         }
