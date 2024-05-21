@@ -51,19 +51,20 @@ public final class ShowCompMembers {
             System.out.println("""
                     1. Junior teams
                     2. Senior teams
-                    3. Go back""");
+                    0. Go back""");
             int choice1 = sc.nextInt();
             switch (choice1) {
                 //Junior teams
                 case 1:
-                    while (true) {
+                    boolean c1 = true;
+                    while (c1) {
                         System.out.println("""
                                 **Junior teams**
                                 1. Crawl team
                                 2. Butterfly team
                                 3. Backcrawl team
                                 4. Breast team
-                                5. Go back""");
+                                0. Go back""");
                         int choice2 = sc.nextInt();
                         switch (choice2) {
                             case 1:
@@ -126,12 +127,15 @@ public final class ShowCompMembers {
                                     }
                                 }
                                 break;
-                            case 5:
-                                listOfCompetetiveMembers();
+                            case 0:
+                                c1 = false;
                             default:
                                 System.out.println("Invalid choice");
+                                break;
                         }
                     }
+                    break;
+                //Senior teams
                 case 2:
                     boolean c2 = true;
                     while (c2) {
@@ -141,7 +145,7 @@ public final class ShowCompMembers {
                                 2. Butterfly team
                                 3. Backcrawl team
                                 4. Breast team
-                                5. Go back""");
+                                0. Go back""");
                         int choice = sc.nextInt();
                         switch (choice) {
                             case 1:
@@ -204,15 +208,17 @@ public final class ShowCompMembers {
                                     }
                                 }
                                 break;
-                            case 5:
+                            case 0:
                                 c2 = false;
                                 break;
                             default:
                                 System.out.println("Invalid choice");
+                                break;
                         }
                         break;
                     }
-                case 3:
+                    break;
+                case 0:
                     running = false;
                     break;
                 default:
