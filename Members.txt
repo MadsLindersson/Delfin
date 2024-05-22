@@ -1,0 +1,6 @@
+wef,234,324,true,true,false,0.0,
+qwd,324,234,true,true,false,0.0,
+qwd,234,234,true,true,false,0.0,
+wef,324,234,true,true,false,0.0,
+mads,2,4,true,true,false,0.0,
+wd,324,234,true,true,false,0.0,

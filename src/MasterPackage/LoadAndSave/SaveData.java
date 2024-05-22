@@ -8,7 +8,7 @@ import MasterPackage.Utility.Accounting.Subscription;
 import java.io.*;
 
 public final class SaveData {
-        public static BufferedWriter output;
+       /* public static BufferedWriter output;
 
     static {
         try {
@@ -25,7 +25,7 @@ public final class SaveData {
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
-    }
+    }*/
 
     private SaveData () {}
 
@@ -40,6 +40,24 @@ public final class SaveData {
 
     //Writes the arraylist to 2 seperate files, 1 for members and one for competitive members.
     public static void saveDataInFile () throws IOException {
+         BufferedWriter output;
+
+         {
+            try {
+                output = new BufferedWriter(new FileWriter("Members.txt"));
+            } catch (IOException e) {
+                throw new RuntimeException(e);
+            }
+        }
+         BufferedWriter output2;
+
+         {
+            try {
+                output2 = new BufferedWriter(new FileWriter("CompetitiveMembers.txt"));
+            } catch (IOException e) {
+                throw new RuntimeException(e);
+            }
+        }
         for(Member member : Main.members)   {
             //Prints competitive member obj's to file.
             if (member instanceof CompetetiveMember) {
@@ -75,7 +93,6 @@ public final class SaveData {
                 output2.write(((CompetetiveMember) member).getPlaceBackcrawl() + ",");
                 output2.write(((CompetetiveMember) member).getPlaceBreast() + ",");
                 output2.newLine();
-                output2.flush();
                 //Prints member obj's to file.
             }else {
                 output.write(member.getName() + ",");
@@ -86,10 +103,9 @@ public final class SaveData {
                 output.write(member.isDebt() + ",");
                 output.write(member.getDebtAmount() + ",");
                 output.newLine();
-                output.flush();
             }
         }
-
+        output2.close();
         output.close();
     }
 }

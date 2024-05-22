@@ -10,12 +10,13 @@ import java.io.IOException;
 import java.util.Scanner;
 
 public final class MainMenu {
-    public static Scanner input = new Scanner(System.in);
+    //public static Scanner input = new Scanner(System.in);
 
     //Empty contructer - Private to ensure no instances of the class can be made.
     private MainMenu () {}
 
     public static void menu () throws IOException {
+        Scanner input = new Scanner(System.in);
         int answer = 1;
 
         while (answer != 0) {
@@ -28,8 +29,8 @@ public final class MainMenu {
             answer = input.nextInt();
             switch (answer) {
                 case 1:
-                    int answer1 = 1;
-                    while (answer1 != 0) {
+                    boolean bitchass = true;
+                    while (bitchass) {
                         System.out.println("""
                                 1. Create new member.
                                 2. Edit member.
@@ -37,7 +38,7 @@ public final class MainMenu {
                                 4. Delete member.
                                 0. Go back.""");
 
-                        answer1 = input.nextInt();
+                        int answer1 = input.nextInt();
 
                         switch (answer1) {
                             case 1:
@@ -55,6 +56,9 @@ public final class MainMenu {
                             case 4:
                                 DeleteMember.deleteMember();
                                 SaveData.saveDataInFile();
+                                break;
+                            case 0:
+                                bitchass = false;
                                 break;
                             default:
                                 break;
