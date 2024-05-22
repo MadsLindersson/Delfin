@@ -1,3 +1,5 @@
+package MasterPackage.Object;
+
 import java.util.Comparator;
 
 public class CompetetiveMember extends Member implements Comparator {

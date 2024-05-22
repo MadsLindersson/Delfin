@@ -1,3 +1,8 @@
+package MasterPackage.Utility.Members;
+
+import MasterPackage.Controller.Main;
+import MasterPackage.Object.Member;
+
 import java.util.InputMismatchException;
 import java.util.Scanner;
 

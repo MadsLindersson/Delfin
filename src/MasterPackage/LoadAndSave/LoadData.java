@@ -1,6 +1,12 @@
+package MasterPackage.LoadAndSave;
+
+import MasterPackage.Object.CompetetiveMember;
+import MasterPackage.Controller.Main;
+import MasterPackage.Object.Member;
+import MasterPackage.Utility.Accounting.Subscription;
+
 import java.io.File;
 import java.io.FileNotFoundException;
-import java.util.Locale;
 import java.util.Scanner;
 
 import static java.lang.Boolean.parseBoolean;

@@ -1,3 +1,9 @@
+package MasterPackage.Utility.Members;
+
+import MasterPackage.Object.CompetetiveMember;
+import MasterPackage.Controller.Main;
+import MasterPackage.Object.Member;
+
 import java.util.ArrayList;
 import java.util.Scanner;
 

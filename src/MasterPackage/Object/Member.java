@@ -1,3 +1,5 @@
+package MasterPackage.Object;
+
 public class Member {
     private String name;
 

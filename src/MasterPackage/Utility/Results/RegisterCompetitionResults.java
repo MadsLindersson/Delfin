@@ -1,8 +1,14 @@
+package MasterPackage.Utility.Results;
+
+import MasterPackage.Object.CompetetiveMember;
+import MasterPackage.Controller.Main;
+import MasterPackage.Object.Member;
+
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
-public class RegisterTrainingResults {
-    public static void registerTrainingResults() {
+public class RegisterCompetitionResults {
+    public static void registerCompetitionResults() {
         Scanner scanner = new Scanner(System.in);
         try {
             System.out.println("List of competitive members");
@@ -14,7 +20,7 @@ public class RegisterTrainingResults {
                 }
             }
 
-            System.out.print("Enter the member ID to update training results: ");
+            System.out.print("Enter the member ID to update competition results: ");
             int memberId = scanner.nextInt();
             scanner.nextLine(); // Consume newline left-over
 
@@ -31,9 +37,7 @@ public class RegisterTrainingResults {
                 return;
             }
 
-            System.out.println("Updating training results for: " + selectedMember.getName());
-
-            System.out.println("Select the training to update:");
+            System.out.println("Select the competition to update:");
             System.out.println("1. Crawl");
             System.out.println("2. Butterfly");
             System.out.println("3. Backcrawl");
@@ -45,61 +49,73 @@ public class RegisterTrainingResults {
             switch (choice) {
                 case 1:
                     if (selectedMember.isCrawl()) {
-                        System.out.print("Enter best training crawl time: ");
-                        double bestTrainingCrawlTime = scanner.nextDouble();
-                        selectedMember.setBestCrawlTime(bestTrainingCrawlTime);
+                        System.out.print("Enter competition crawl time: ");
+                        double competitionCrawlTime = scanner.nextDouble();
+                        selectedMember.setCompetitionCrawlTime(competitionCrawlTime);
                         scanner.nextLine(); // Consume newline left-over
-                        System.out.print("Enter the date the time was acquired: ");
+                        System.out.println("Enter the date the time was acquired: ");
                         String crawlDate = scanner.nextLine();
-                        selectedMember.setDateCrawl(crawlDate);
+                        selectedMember.setDateCrawlCompetetive(crawlDate);
+                        System.out.println("Enter the place the time was acquired: ");
+                        String crawlPlace = scanner.nextLine();
+                        selectedMember.setPlaceCrawl(crawlPlace);
                     } else {
                         System.out.println("Crawl is not applicable for this member.");
                     }
                     break;
                 case 2:
                     if (selectedMember.isButterfly()) {
-                        System.out.print("Enter best training butterfly time: ");
-                        double bestTrainingButterflyTime = scanner.nextDouble();
-                        selectedMember.setBestButterflyTime(bestTrainingButterflyTime);
+                        System.out.print("Enter competition butterfly time: ");
+                        double competitionButterflyTime = scanner.nextDouble();
+                        selectedMember.setCompetitionButterflyTime(competitionButterflyTime);
                         scanner.nextLine(); // Consume newline left-over
-                        System.out.print("Enter the date the time was acquired: ");
+                        System.out.println("Enter the date the time was acquired: ");
                         String butterflyDate = scanner.nextLine();
-                        selectedMember.setDateButterfly(butterflyDate);
+                        selectedMember.setDateButterflyCompetetive(butterflyDate);
+                        System.out.println("Enter the place the time was acquired: ");
+                        String butterflyPlace = scanner.nextLine();
+                        selectedMember.setPlaceButterfly(butterflyPlace);
                     } else {
                         System.out.println("Butterfly is not applicable for this member.");
                     }
                     break;
                 case 3:
                     if (selectedMember.isBackcrawl()) {
-                        System.out.print("Enter best training backcrawl time: ");
-                        double bestTrainingBackcrawlTime = scanner.nextDouble();
-                        selectedMember.setBestBackcrawlTime(bestTrainingBackcrawlTime);
+                        System.out.print("Enter competition backcrawl time: ");
+                        double competitionBackcrawlTime = scanner.nextDouble();
+                        selectedMember.setCompetitionBackcrawlTime(competitionBackcrawlTime);
                         scanner.nextLine(); // Consume newline left-over
-                        System.out.print("Enter the date the time was acquired: ");
+                        System.out.println("Enter the date the time was acquired: ");
                         String backcrawlDate = scanner.nextLine();
-                        selectedMember.setDateBackcrawl(backcrawlDate);
+                        selectedMember.setDateBackcrawlCompetetive(backcrawlDate);
+                        System.out.println("Enter the place the time was acquired: ");
+                        String backcrawlPlace = scanner.nextLine();
+                        selectedMember.setPlaceBackcrawl(backcrawlPlace);
                     } else {
                         System.out.println("Backcrawl is not applicable for this member.");
                     }
                     break;
                 case 4:
                     if (selectedMember.isBreast()) {
-                        System.out.print("Enter best training breast time: ");
-                        double bestTrainingBreastTime = scanner.nextDouble();
-                        selectedMember.setBestBreastTime(bestTrainingBreastTime);
+                        System.out.print("Enter competition breast time: ");
+                        double competitionBreastTime = scanner.nextDouble();
+                        selectedMember.setCompetitionBreastTime(competitionBreastTime);
                         scanner.nextLine(); // Consume newline left-over
-                        System.out.print("Enter the date the time was acquired: ");
+                        System.out.println("Enter the date the time was acquired: ");
                         String breastDate = scanner.nextLine();
-                        selectedMember.setDateBreast(breastDate);
+                        selectedMember.setDateBreastCompetetive(breastDate);
+                        System.out.println("Enter the place the time was acquired: ");
+                        String breastPlace = scanner.nextLine();
+                        selectedMember.setPlaceBreast(breastPlace);
                     } else {
                         System.out.println("Breast is not applicable for this member.");
                     }
                     break;
                 default:
-                    System.out.println("Invalid choice. Please select a valid training style.");
+                    System.out.println("Invalid choice. Please select a valid competition style.");
             }
 
-            System.out.println("Training results updated for member: " + selectedMember.getName());
+            System.out.println("Competition results updated for member: " + selectedMember.getName());
         } catch (InputMismatchException e) {
             System.out.println("Invalid input. Please enter the correct data type.");
             scanner.nextLine(); // Clear the buffer

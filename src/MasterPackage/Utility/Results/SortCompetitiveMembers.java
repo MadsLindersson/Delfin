@@ -1,3 +1,8 @@
+package MasterPackage.Utility.Results;
+
+import MasterPackage.Object.CompetetiveMember;
+import MasterPackage.Utility.Members.ShowCompMembers;
+
 public final class SortCompetitiveMembers {
 
     private SortCompetitiveMembers ()   {}
