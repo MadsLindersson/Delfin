@@ -224,6 +224,7 @@ public final class ShowCompMembers {
                                 break;
                         }
                     }
+                    break;
                 case 0:
                     running = false;
                     break;
