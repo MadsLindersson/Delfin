@@ -9,10 +9,7 @@ public class Main {
         LoadData.loadDataFromFiles();
         LoadData.readSubscriptionRatesFromFile();
         ShowCompMembers.sortCompMembers();
-        //SortCompetitiveMembers.sortCrawlTime();
-        //SortCompetitiveMembers.sortBackcrawlTime();
-        //SortCompetitiveMembers.sortBreastTime();
-        SortCompetitiveMembers.sortButterflyTime();
+        SortCompetitiveMembers.sortDisciplineTimes();
         MainMenu.menu();
 
 
