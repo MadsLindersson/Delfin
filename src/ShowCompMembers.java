@@ -135,7 +135,6 @@ public final class ShowCompMembers {
                                 break;
                         }
                     }
-                    break;
                 //Senior teams
                 case 2:
                     boolean c2 = true;
@@ -217,6 +216,7 @@ public final class ShowCompMembers {
                                 break;
                         }
                     }
+                    break;
                 case 0:
                     running = false;
                     break;
