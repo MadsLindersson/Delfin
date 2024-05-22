@@ -1,3 +1,9 @@
+package MasterPackage.Utility.Members;
+
+import MasterPackage.Object.CompetetiveMember;
+import MasterPackage.Controller.Main;
+import MasterPackage.Object.Member;
+
 public class ShowMembers {
     public static void showMembers() {
         for (Member member : Main.members) {

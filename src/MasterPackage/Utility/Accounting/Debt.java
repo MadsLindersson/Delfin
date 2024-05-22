@@ -1,3 +1,8 @@
+package MasterPackage.Utility.Accounting;
+
+import MasterPackage.Controller.Main;
+import MasterPackage.Object.Member;
+
 public class Debt {
 
     public static void checkDebt() {

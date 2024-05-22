@@ -1,9 +1,14 @@
+package MasterPackage.Utility.Results;
+
+import MasterPackage.Object.CompetetiveMember;
+import MasterPackage.Utility.Members.ShowCompMembers;
+
 import java.util.Scanner;
 
-public final class BestToWorstCompetitiveTimes  {
+public final class BestToWorstTrainingTimes  {
 
-    private BestToWorstCompetitiveTimes () {}
-    public static void printBestToWorstCompetitiveTimes ()   {
+    private BestToWorstTrainingTimes () {}
+    public static void printBestToWorstTimes ()   {
         Scanner input = new Scanner(System.in);
         boolean outerWhile = true;
         while(outerWhile) {
@@ -28,7 +33,7 @@ public final class BestToWorstCompetitiveTimes  {
                         switch (answerJunior) {
                             case 1:
                                 int temp = 1;
-                                System.out.println("Junior crawl swimmers best to worst competitive times");
+                                System.out.println("Junior crawl swimmers best to worst times");
                                 System.out.println("*---------------------------*");
                                 for (CompetetiveMember member : ShowCompMembers.juniorCrawlList) {
                                     System.out.println(temp + ":");
@@ -38,62 +43,58 @@ public final class BestToWorstCompetitiveTimes  {
                                             Disciplin        : Crawl
                                             Best time        : %2.2f sec
                                             Date of best time: %s
-                                            Location         : %s
-                                            *---------------------------*""", member.getName(), member.getAge(), member.getCompetitionCrawlTime(), member.getDateCrawl(), member.getPlaceCrawl());
+                                            *---------------------------*""", member.getName(), member.getAge(), member.getBestCrawlTime(), member.getDateCrawl());
                                     System.out.println();
                                     temp++;
                                 }
                                 break;
                             case 2:
                                 int temp2 = 1;
-                                System.out.println("Junior butterfly swimmers best to worst competitive times");
+                                System.out.println("Junior butterfly swimmers best to worst times");
                                 System.out.println("*---------------------------*");
                                 for (CompetetiveMember member : ShowCompMembers.juniorButterflyList) {
                                     System.out.println(temp2 + ":");
                                     System.out.printf("""
                                             Name             : %s
                                             Age              : %d
-                                            Disciplin        : Crawl
+                                            Disciplin        : Butterfly
                                             Best time        : %2.2f sec
                                             Date of best time: %s
-                                            Location         : %s
-                                            *---------------------------*""", member.getName(), member.getAge(), member.getCompetitionButterflyTime(), member.getDateButterfly(), member.getPlaceButterfly());
+                                            *---------------------------*""", member.getName(), member.getAge(), member.getBestButterflyTime(), member.getDateButterfly());
                                     System.out.println();
                                     temp2++;
                                 }
                                 break;
                             case 3:
                                 int temp3 = 1;
-                                System.out.println("Junior backcrawl swimmers best to worst competitive times");
+                                System.out.println("Junior backcrawl swimmers best to worst times");
                                 System.out.println("*---------------------------*");
                                 for (CompetetiveMember member : ShowCompMembers.juniorBackcrawlList) {
                                     System.out.println(temp3 + ":");
                                     System.out.printf("""
                                             Name             : %s
                                             Age              : %d
-                                            Disciplin        : Crawl
+                                            Disciplin        : Backcrawl
                                             Best time        : %2.2f sec
                                             Date of best time: %s
-                                            Location         : %s
-                                            *---------------------------*""", member.getName(), member.getAge(), member.getCompetitionBackcrawlTime(), member.getDateBackcrawl(), member.getPlaceBackcrawl());
+                                            *---------------------------*""", member.getName(), member.getAge(), member.getBestBackcrawlTime(), member.getDateBackcrawl());
                                     System.out.println();
                                     temp3++;
                                 }
                                 break;
                             case 4:
                                 int temp4 = 1;
-                                System.out.println("Junior breast swimmers best to worst competitive times");
+                                System.out.println("Junior breast swimmers best to worst times");
                                 System.out.println("*---------------------------*");
                                 for (CompetetiveMember member : ShowCompMembers.juniorBreastList) {
                                     System.out.println(temp4 + ":");
                                     System.out.printf("""
                                             Name             : %s
                                             Age              : %d
-                                            Disciplin        : Crawl
+                                            Disciplin        : Breast
                                             Best time        : %2.2f sec
                                             Date of best time: %s
-                                            Location         : %s
-                                            *---------------------------*""", member.getName(), member.getAge(), member.getCompetitionBreastTime(), member.getDateBreast(), member.getPlaceBreast());
+                                            *---------------------------*""", member.getName(), member.getAge(), member.getBestBreastTime(), member.getDateBreast());
                                     System.out.println();
                                     temp4++;
                                 }
@@ -121,7 +122,7 @@ public final class BestToWorstCompetitiveTimes  {
                         switch (answerJunior) {
                             case 1:
                                 int temp = 1;
-                                System.out.println("Senior Crawl swimmers best to worst competitive times");
+                                System.out.println("Senior Crawl swimmers best to worst times");
                                 System.out.println("*---------------------------*");
                                 for (CompetetiveMember member : ShowCompMembers.seniorCrawlList) {
                                     System.out.println(temp + ":");
@@ -131,62 +132,58 @@ public final class BestToWorstCompetitiveTimes  {
                                             Disciplin        : Crawl
                                             Best time        : %2.2f sec
                                             Date of best time: %s
-                                            Location         : %s
-                                            *---------------------------*""", member.getName(), member.getAge(), member.getCompetitionCrawlTime(), member.getDateCrawl(), member.getPlaceCrawl());
+                                            *---------------------------*""", member.getName(), member.getAge(), member.getBestCrawlTime(), member.getDateCrawl());
                                     System.out.println();
                                     temp++;
                                 }
                                 break;
                             case 2:
                                 int temp2 = 1;
-                                System.out.println("Senior butterfly swimmers best to worst competitive times");
+                                System.out.println("Senior butterfly swimmers best to worst times");
                                 System.out.println("*---------------------------*");
                                 for (CompetetiveMember member : ShowCompMembers.seniorButterflyList) {
                                     System.out.println(temp2 + ":");
                                     System.out.printf("""
                                             Name             : %s
                                             Age              : %d
-                                            Disciplin        : Crawl
+                                            Disciplin        : Butterfly
                                             Best time        : %2.2f sec
                                             Date of best time: %s
-                                            Location         : %s
-                                            *---------------------------*""", member.getName(), member.getAge(), member.getCompetitionButterflyTime(), member.getDateButterfly(), member.getPlaceButterfly());
+                                            *---------------------------*""", member.getName(), member.getAge(), member.getBestButterflyTime(), member.getDateButterfly());
                                     System.out.println();
                                     temp2++;
                                 }
                                 break;
                             case 3:
                                 int temp3 = 1;
-                                System.out.println("Senior backcrawl swimmers best to worst competitive times");
+                                System.out.println("Senior backcrawl swimmers best to worst times");
                                 System.out.println("*---------------------------*");
                                 for (CompetetiveMember member : ShowCompMembers.seniorBackcrawlList) {
                                     System.out.println(temp3 + ":");
                                     System.out.printf("""
                                             Name             : %s
                                             Age              : %d
-                                            Disciplin        : Crawl
+                                            Disciplin        : Backcrawl
                                             Best time        : %2.2f sec
                                             Date of best time: %s
-                                            Location         : %s
-                                            *---------------------------*""", member.getName(), member.getAge(), member.getCompetitionBackcrawlTime(), member.getDateBackcrawl(), member.getPlaceBackcrawl());
+                                            *---------------------------*""", member.getName(), member.getAge(), member.getBestBackcrawlTime(), member.getDateBackcrawl());
                                     System.out.println();
                                     temp3++;
                                 }
                                 break;
                             case 4:
                                 int temp4 = 1;
-                                System.out.println("Senior breast swimmers best to worst competitive times");
+                                System.out.println("Senior breast swimmers best to worst times");
                                 System.out.println("*---------------------------*");
                                 for (CompetetiveMember member : ShowCompMembers.seniorBreastList) {
                                     System.out.println(temp4 + ":");
                                     System.out.printf("""
                                             Name             : %s
                                             Age              : %d
-                                            Disciplin        : Crawl
+                                            Disciplin        : Breast
                                             Best time        : %2.2f sec
                                             Date of best time: %s
-                                            Location         : %s
-                                            *---------------------------*""", member.getName(), member.getAge(), member.getCompetitionBreastTime(), member.getDateBreast(), member.getPlaceBreast());
+                                            *---------------------------*""", member.getName(), member.getAge(), member.getBestBreastTime(), member.getDateBreast());
                                     System.out.println();
                                     temp4++;
                                 }
@@ -209,3 +206,4 @@ public final class BestToWorstCompetitiveTimes  {
         }
     }
 }
+
