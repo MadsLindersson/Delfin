@@ -37,7 +37,6 @@ public final class ShowCompMembers {
                         juniorBackcrawlList.add((CompetetiveMember) member);
                     } if (((CompetetiveMember) member).isBreast()) {
                         juniorBreastList.add((CompetetiveMember) member);
-                        break;
                     }
                 }
             }
