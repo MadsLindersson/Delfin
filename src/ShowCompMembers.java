@@ -134,6 +134,7 @@ public final class ShowCompMembers {
                                 break;
                         }
                     }
+                    break;
                 //Senior teams
                 case 2:
                     boolean c2 = true;
