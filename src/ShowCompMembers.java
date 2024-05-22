@@ -76,6 +76,7 @@ public final class ShowCompMembers {
 
                                         System.out.println("Best Training Crawl Time: " + member.getBestCrawlTime());
                                         System.out.println("Competition Crawl Time: " + member.getCompetitionCrawlTime());
+                                        System.out.println("Competition place: " + member.getPlaceCrawl());
 
                                         System.out.println("---------------------------------------");
                                     }
@@ -91,6 +92,7 @@ public final class ShowCompMembers {
 
                                         System.out.println("Best Training Crawl Time: " + member.getBestButterflyTime());
                                         System.out.println("Competition Crawl Time: " + member.getCompetitionButterflyTime());
+                                        System.out.println("Competition place: " + member.getPlaceButterfly());
 
                                         System.out.println("---------------------------------------");
                                     }
@@ -106,6 +108,7 @@ public final class ShowCompMembers {
 
                                         System.out.println("Best Training Crawl Time: " + member.getBestBackcrawlTime());
                                         System.out.println("Competition Crawl Time: " + member.getCompetitionBackcrawlTime());
+                                        System.out.println("Competition place: " + member.getPlaceBackcrawl());
 
                                         System.out.println("---------------------------------------");
                                     }
@@ -121,6 +124,7 @@ public final class ShowCompMembers {
 
                                         System.out.println("Best Training Crawl Time: " + member.getBestBreastTime());
                                         System.out.println("Competition Crawl Time: " + member.getCompetitionBreastTime());
+                                        System.out.println("Competition place: " + member.getPlaceBreast());
 
                                         System.out.println("---------------------------------------");
                                     }
@@ -158,6 +162,7 @@ public final class ShowCompMembers {
 
                                         System.out.println("Best Training Crawl Time: " + member.getBestCrawlTime());
                                         System.out.println("Competition Crawl Time: " + member.getCompetitionCrawlTime());
+                                        System.out.println("Competition place: " + member.getPlaceCrawl());
 
                                         System.out.println("---------------------------------------");
                                     }
@@ -173,6 +178,7 @@ public final class ShowCompMembers {
 
                                         System.out.println("Best Training Crawl Time: " + member.getBestButterflyTime());
                                         System.out.println("Competition Crawl Time: " + member.getCompetitionButterflyTime());
+                                        System.out.println("Competition place: " + member.getPlaceButterfly());
 
                                         System.out.println("---------------------------------------");
                                     }
@@ -188,6 +194,7 @@ public final class ShowCompMembers {
 
                                         System.out.println("Best Training Crawl Time: " + member.getBestBackcrawlTime());
                                         System.out.println("Competition Crawl Time: " + member.getCompetitionBackcrawlTime());
+                                        System.out.println("Competition place: " + member.getPlaceCrawl());
 
                                         System.out.println("---------------------------------------");
                                     }
@@ -203,6 +210,7 @@ public final class ShowCompMembers {
 
                                         System.out.println("Best Training Crawl Time: " + member.getBestBreastTime());
                                         System.out.println("Competition Crawl Time: " + member.getCompetitionBreastTime());
+                                        System.out.println("Competition place: " + member.getPlaceBreast());
 
                                         System.out.println("---------------------------------------");
                                     }

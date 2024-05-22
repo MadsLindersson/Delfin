@@ -61,7 +61,7 @@ public final class MainMenu {
                                 2. Register training results.
                                 3. Register competition results.
                                 4. Show training results for all swimmers.
-                                5. Show competition results.
+                                5. Show competition results for all swimmers.
                                 6. Show all competetitive swimmers.
                                 0. Go back.""");
 
@@ -78,8 +78,10 @@ public final class MainMenu {
                                 RegisterCompetitionResults.registerCompetitionResults();
                                 break;
                             case 4:
+                                BestToWorstTrainingTimes.printBestToWorstTimes();
                                 break;
                             case 5:
+                                BestToWorstCompetitiveTimes.printBestToWorstCompetitiveTimes();
                                 break;
                             case 6:
                                 ShowCompMembers.listOfCompetetiveMembers();
