@@ -8,6 +8,8 @@ public class Main {
     public static void main(String[] args) throws IOException {
         LoadData.loadDataFromFiles();
         LoadData.readSubscriptionRatesFromFile();
+        ShowCompMembers.sortCompMembers();
+        SortCompetitiveMembers.sortDisciplineTimes();
         MainMenu.menu();
     }
 }

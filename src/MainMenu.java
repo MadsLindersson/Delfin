@@ -57,19 +57,19 @@ public final class MainMenu {
                     int answer2 = 1;
                     while (answer2 != 0) {
                         System.out.println("""
-                                1. Show top 5 swimmers in each disciplin.
+                                1. Show top 5 swimmers.
                                 2. Register training results.
                                 3. Register competition results.
                                 4. Show training results for all swimmers.
                                 5. Show competition results.
                                 6. Show all competetitive swimmers.
-                                7. Show assigned coaches.
                                 0. Go back.""");
 
                         answer2 = input.nextInt();
 
                         switch (answer2) {
                             case 1:
+                                Top5.printTopFiveCompMembers();
                                 break;
                             case 2:
                                 RegisterTrainingResults.registerTrainingResults();
@@ -82,10 +82,7 @@ public final class MainMenu {
                             case 5:
                                 break;
                             case 6:
-                                break;
-                            case 7:
-                                AssignCoach.showAssignedCoach();
-                                break;
+                                ShowCompMembers.listOfCompetetiveMembers();
                             default:
                                 break;
                         }
