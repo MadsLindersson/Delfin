@@ -94,7 +94,6 @@ public class EditMember {
         } catch (Exception e) {
             System.out.println("An error occurred: " + e.getMessage());
         } finally {
-            scanner.close();
         }
     }
 }
