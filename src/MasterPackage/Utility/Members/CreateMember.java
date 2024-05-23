@@ -10,6 +10,7 @@ import java.util.Scanner;
 public class CreateMember {
 
     public static void createMember() {
+        //LUK IKKE
         Scanner scanner = new Scanner(System.in);
         try {
             System.out.println("1. Member");
@@ -96,7 +97,8 @@ public class CreateMember {
         } catch (Exception e) {
             System.out.println("An error occurred: " + e.getMessage());
         } finally {
-            scanner.close();
+            //Scanner.close lukker ALT system in og gør at programmet crasher - https://stackoverflow.com/questions/13042008/java-util-nosuchelementexception-scanner-reading-user-input
+            //scanner.close();
         }
     }
 }
